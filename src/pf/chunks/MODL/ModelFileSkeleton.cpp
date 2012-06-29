@@ -10,40 +10,40 @@ namespace chunks {
 //      ModelTransformData
 //============================================================================/
 
-ModelTransformData::ModelTransformData()
-    : Flags(0)
+ModelTransformDataV0::ModelTransformDataV0()
+    : flags(0)
 {
 }
 
-ModelTransformData::ModelTransformData(const byte* p_data, uint32 p_size, const byte** po_pointer)
+ModelTransformDataV0::ModelTransformDataV0(const byte* p_data, uint32 p_size, const byte** po_pointer)
 {
     auto pointer = assign(p_data, p_size);
     if (po_pointer) { *po_pointer = pointer; }
 }
 
-ModelTransformData::ModelTransformData(const ModelTransformData& p_other)
-    : Flags(p_other.Flags)
-    , Position(p_other.Position)
-    , Orientation(p_other.Orientation)
+ModelTransformDataV0::ModelTransformDataV0(const ModelTransformDataV0& p_other)
+    : flags(p_other.flags)
+    , position(p_other.position)
+    , orientation(p_other.orientation)
 {
-    std::copy(p_other.ScaleShear, p_other.ScaleShear + 3, ScaleShear);
+    std::copy(p_other.scaleShear, p_other.scaleShear + 3, scaleShear);
 }
 
-ModelTransformData& ModelTransformData::operator=(const ModelTransformData& p_other)
+ModelTransformDataV0& ModelTransformDataV0::operator=(const ModelTransformDataV0& p_other)
 {
-    Flags       = p_other.Flags;
-    Position    = p_other.Position;
-    Orientation = p_other.Orientation;
-    std::copy(p_other.ScaleShear, p_other.ScaleShear + 3, ScaleShear);
+    flags       = p_other.flags;
+    position    = p_other.position;
+    orientation = p_other.orientation;
+    std::copy(p_other.scaleShear, p_other.scaleShear + 3, scaleShear);
     return *this;
 }
 
-const byte* ModelTransformData::assign(const byte* p_data, uint32 p_size)
+const byte* ModelTransformDataV0::assign(const byte* p_data, uint32 p_size)
 {
-    p_data = helpers::read(p_data, p_size, Flags);
-    p_data = helpers::read(p_data, p_size, Position);
-    p_data = helpers::read(p_data, p_size, Orientation);
-    p_data = helpers::read(p_data, p_size, ScaleShear);
+    p_data = helpers::read(p_data, p_size, flags);
+    p_data = helpers::read(p_data, p_size, position);
+    p_data = helpers::read(p_data, p_size, orientation);
+    p_data = helpers::read(p_data, p_size, scaleShear);
     return p_data;
 }
 
@@ -51,50 +51,50 @@ const byte* ModelTransformData::assign(const byte* p_data, uint32 p_size)
 //      ModelBoneData
 //============================================================================/
 
-ModelBoneData::ModelBoneData()
-    : ParentIndex(0)
-    , LODError(0)
+ModelBoneDataV0::ModelBoneDataV0()
+    : parentIndex(0)
+    , lodError(0)
 {
 }
 
-ModelBoneData::ModelBoneData(const byte* p_data, uint32 p_size, const byte** po_pointer)
+ModelBoneDataV0::ModelBoneDataV0(const byte* p_data, uint32 p_size, const byte** po_pointer)
 {
     auto pointer = assign(p_data, p_size);
     if (po_pointer) { *po_pointer = pointer; }
 }
 
-ModelBoneData::ModelBoneData(const ModelBoneData& p_other)
-    : Name(p_other.Name)
-    , ParentIndex(p_other.ParentIndex)
-    , LocalTransform(p_other.LocalTransform)
-    , LODError(p_other.LODError)
-    , ExtendedDataType(p_other.ExtendedDataType)
-    , ExtendedDataObject(p_other.ExtendedDataObject)
+ModelBoneDataV0::ModelBoneDataV0(const ModelBoneDataV0& p_other)
+    : name(p_other.name)
+    , parentIndex(p_other.parentIndex)
+    , localTransform(p_other.localTransform)
+    , lodError(p_other.lodError)
+    , extendedDataType(p_other.extendedDataType)
+    , extendedDataObject(p_other.extendedDataObject)
 {
-    std::copy(p_other.InverseWorld4x4, p_other.InverseWorld4x4 + 4, InverseWorld4x4);
+    std::copy(p_other.inverseWorld4x4, p_other.inverseWorld4x4 + 4, inverseWorld4x4);
 }
 
-ModelBoneData& ModelBoneData::operator=(const ModelBoneData& p_other)
+ModelBoneDataV0& ModelBoneDataV0::operator=(const ModelBoneDataV0& p_other)
 {
-    Name                = p_other.Name;
-    ParentIndex         = p_other.ParentIndex;
-    LocalTransform      = p_other.LocalTransform;
-    LODError            = p_other.LODError;
-    ExtendedDataType   = p_other.ExtendedDataType;
-    ExtendedDataObject = p_other.ExtendedDataObject;
-    std::copy(p_other.InverseWorld4x4, p_other.InverseWorld4x4 + 4, InverseWorld4x4);
+    name                = p_other.name;
+    parentIndex         = p_other.parentIndex;
+    localTransform      = p_other.localTransform;
+    lodError            = p_other.lodError;
+    extendedDataType   = p_other.extendedDataType;
+    extendedDataObject = p_other.extendedDataObject;
+    std::copy(p_other.inverseWorld4x4, p_other.inverseWorld4x4 + 4, inverseWorld4x4);
     return *this;
 }
 
-const byte* ModelBoneData::assign(const byte* p_data, uint32 p_size)
+const byte* ModelBoneDataV0::assign(const byte* p_data, uint32 p_size)
 {
-    p_data = helpers::read(p_data, p_size, Name);
-    p_data = helpers::read(p_data, p_size, ParentIndex);
-    p_data = helpers::read(p_data, p_size, LocalTransform);
-    p_data = helpers::read(p_data, p_size, InverseWorld4x4);
-    p_data = helpers::read(p_data, p_size, LODError);
-    p_data = helpers::read(p_data, p_size, ExtendedDataType);
-    p_data = helpers::read(p_data, p_size, ExtendedDataObject);
+    p_data = helpers::read(p_data, p_size, name);
+    p_data = helpers::read(p_data, p_size, parentIndex);
+    p_data = helpers::read(p_data, p_size, localTransform);
+    p_data = helpers::read(p_data, p_size, inverseWorld4x4);
+    p_data = helpers::read(p_data, p_size, lodError);
+    p_data = helpers::read(p_data, p_size, extendedDataType);
+    p_data = helpers::read(p_data, p_size, extendedDataObject);
     return p_data;
 }
 
@@ -103,7 +103,7 @@ const byte* ModelBoneData::assign(const byte* p_data, uint32 p_size)
 //============================================================================/
 
 ModelGrannySkeletonV1::ModelGrannySkeletonV1()
-    : LODType(0)
+    : lodType(0)
 {
 }
 
@@ -114,31 +114,31 @@ ModelGrannySkeletonV1::ModelGrannySkeletonV1(const byte* p_data, uint32 p_size, 
 }
 
 ModelGrannySkeletonV1::ModelGrannySkeletonV1(const ModelGrannySkeletonV1& p_other)
-    : Name(p_other.Name)
-    , Bones(p_other.Bones)
-    , LODType(p_other.LODType)
-    , ExtendedDataType(p_other.ExtendedDataType)
-    , ExtendedDataObject(p_other.ExtendedDataObject)
+    : name(p_other.name)
+    , bones(p_other.bones)
+    , lodType(p_other.lodType)
+    , extendedDataType(p_other.extendedDataType)
+    , extendedDataObject(p_other.extendedDataObject)
 {
 }
 
 ModelGrannySkeletonV1& ModelGrannySkeletonV1::operator=(const ModelGrannySkeletonV1& p_other)
 {
-    Name               = p_other.Name;
-    Bones              = p_other.Bones;
-    LODType            = p_other.LODType;
-    ExtendedDataType   = p_other.ExtendedDataType;
-    ExtendedDataObject = p_other.ExtendedDataObject;
+    name               = p_other.name;
+    bones              = p_other.bones;
+    lodType            = p_other.lodType;
+    extendedDataType   = p_other.extendedDataType;
+    extendedDataObject = p_other.extendedDataObject;
     return *this;
 }
 
 const byte* ModelGrannySkeletonV1::assign(const byte* p_data, uint32 p_size)
 {
-    p_data = helpers::read(p_data, p_size, Name);
-    p_data = helpers::read(p_data, p_size, Bones);
-    p_data = helpers::read(p_data, p_size, LODType);
-    p_data = helpers::read(p_data, p_size, ExtendedDataType);
-    p_data = helpers::read(p_data, p_size, ExtendedDataObject);
+    p_data = helpers::read(p_data, p_size, name);
+    p_data = helpers::read(p_data, p_size, bones);
+    p_data = helpers::read(p_data, p_size, lodType);
+    p_data = helpers::read(p_data, p_size, extendedDataType);
+    p_data = helpers::read(p_data, p_size, extendedDataObject);
     return p_data;
 }
 
@@ -146,30 +146,30 @@ const byte* ModelGrannySkeletonV1::assign(const byte* p_data, uint32 p_size)
 //      ModelMeshBindingData
 //============================================================================/
 
-ModelMeshBindingData::ModelMeshBindingData()
+ModelMeshBindingDataV0::ModelMeshBindingDataV0()
 {
 }
 
-ModelMeshBindingData::ModelMeshBindingData(const byte* p_data, uint32 p_size, const byte** po_pointer)
+ModelMeshBindingDataV0::ModelMeshBindingDataV0(const byte* p_data, uint32 p_size, const byte** po_pointer)
 {
     auto pointer = assign(p_data, p_size);
     if (po_pointer) { *po_pointer = pointer; }
 }
 
-ModelMeshBindingData::ModelMeshBindingData(const ModelMeshBindingData& p_other)
-    : Mesh(p_other.Mesh)
+ModelMeshBindingDataV0::ModelMeshBindingDataV0(const ModelMeshBindingDataV0& p_other)
+    : mesh(p_other.mesh)
 {
 }
 
-ModelMeshBindingData& ModelMeshBindingData::operator=(const ModelMeshBindingData& p_other)
+ModelMeshBindingDataV0& ModelMeshBindingDataV0::operator=(const ModelMeshBindingDataV0& p_other)
 {
-    Mesh = p_other.Mesh;
+    mesh = p_other.mesh;
     return *this;
 }
 
-const byte* ModelMeshBindingData::assign(const byte* p_data, uint32 p_size)
+const byte* ModelMeshBindingDataV0::assign(const byte* p_data, uint32 p_size)
 {
-    p_data = helpers::read(p_data, p_size, Mesh);
+    p_data = helpers::read(p_data, p_size, mesh);
     return p_data;
 }
 
@@ -188,34 +188,34 @@ ModelGrannyModelV1::ModelGrannyModelV1(const byte* p_data, uint32 p_size, const 
 }
 
 ModelGrannyModelV1::ModelGrannyModelV1(const ModelGrannyModelV1& p_other)
-    : Name(p_other.Name)
-    , Skeleton(p_other.Skeleton)
-    , InitialPlacement(p_other.InitialPlacement)
-    , MeshBindings(p_other.MeshBindings)
-    , ExtendedDataType(p_other.ExtendedDataType)
-    , ExtendedDataObject(p_other.ExtendedDataObject)
+    : name(p_other.name)
+    , skeleton(p_other.skeleton)
+    , initialPlacement(p_other.initialPlacement)
+    , meshBindings(p_other.meshBindings)
+    , extendedDataType(p_other.extendedDataType)
+    , extendedDataObject(p_other.extendedDataObject)
 {
 }
 
 ModelGrannyModelV1& ModelGrannyModelV1::operator=(const ModelGrannyModelV1& p_other)
 {
-    Name                = p_other.Name;
-    Skeleton            = p_other.Skeleton;
-    InitialPlacement    = p_other.InitialPlacement;
-    MeshBindings        = p_other.MeshBindings;
-    ExtendedDataType    = p_other.ExtendedDataType;
-    ExtendedDataObject  = p_other.ExtendedDataObject;
+    name                = p_other.name;
+    skeleton            = p_other.skeleton;
+    initialPlacement    = p_other.initialPlacement;
+    meshBindings        = p_other.meshBindings;
+    extendedDataType    = p_other.extendedDataType;
+    extendedDataObject  = p_other.extendedDataObject;
     return *this;
 }
 
 const byte* ModelGrannyModelV1::assign(const byte* p_data, uint32 p_size)
 {
-    p_data = helpers::read(p_data, p_size, Name);
-    p_data = helpers::read(p_data, p_size, Skeleton);
-    p_data = helpers::read(p_data, p_size, InitialPlacement);
-    p_data = helpers::read(p_data, p_size, MeshBindings);
-    p_data = helpers::read(p_data, p_size, ExtendedDataType);
-    p_data = helpers::read(p_data, p_size, ExtendedDataObject);
+    p_data = helpers::read(p_data, p_size, name);
+    p_data = helpers::read(p_data, p_size, skeleton);
+    p_data = helpers::read(p_data, p_size, initialPlacement);
+    p_data = helpers::read(p_data, p_size, meshBindings);
+    p_data = helpers::read(p_data, p_size, extendedDataType);
+    p_data = helpers::read(p_data, p_size, extendedDataObject);
     return p_data;
 }
 
@@ -377,28 +377,28 @@ const byte* ModelBoneConstraintV63::assign(const byte* p_data, uint32 p_size)
 //      PackGrannyMirrorSpecType
 //============================================================================/
 
-PackGrannyMirrorSpecType::PackGrannyMirrorSpecType()
+PackGrannyMirrorSpecTypeV0::PackGrannyMirrorSpecTypeV0()
 {
 }
 
-PackGrannyMirrorSpecType::PackGrannyMirrorSpecType(const byte* p_data, uint32 p_size, const byte** po_pointer)
+PackGrannyMirrorSpecTypeV0::PackGrannyMirrorSpecTypeV0(const byte* p_data, uint32 p_size, const byte** po_pointer)
 {
     auto pointer = assign(p_data, p_size);
     if (po_pointer) { *po_pointer = pointer; }
 }
 
-PackGrannyMirrorSpecType::PackGrannyMirrorSpecType(const PackGrannyMirrorSpecType& p_other)
+PackGrannyMirrorSpecTypeV0::PackGrannyMirrorSpecTypeV0(const PackGrannyMirrorSpecTypeV0& p_other)
     : mirrorSpec(p_other.mirrorSpec)
 {
 }
 
-PackGrannyMirrorSpecType& PackGrannyMirrorSpecType::operator=(const PackGrannyMirrorSpecType& p_other)
+PackGrannyMirrorSpecTypeV0& PackGrannyMirrorSpecTypeV0::operator=(const PackGrannyMirrorSpecTypeV0& p_other)
 {
     mirrorSpec = p_other.mirrorSpec;
     return *this;
 }
 
-const byte* PackGrannyMirrorSpecType::assign(const byte* p_data, uint32 p_size)
+const byte* PackGrannyMirrorSpecTypeV0::assign(const byte* p_data, uint32 p_size)
 {
     p_data = helpers::read(p_data, p_size, mirrorSpec);
     return p_data;
@@ -408,28 +408,28 @@ const byte* PackGrannyMirrorSpecType::assign(const byte* p_data, uint32 p_size)
 //      PackGrannyTrackMaskType
 //============================================================================/
 
-PackGrannyTrackMaskType::PackGrannyTrackMaskType()
+PackGrannyTrackMaskTypeV0::PackGrannyTrackMaskTypeV0()
 {
 }
 
-PackGrannyTrackMaskType::PackGrannyTrackMaskType(const byte* p_data, uint32 p_size, const byte** po_pointer)
+PackGrannyTrackMaskTypeV0::PackGrannyTrackMaskTypeV0(const byte* p_data, uint32 p_size, const byte** po_pointer)
 {
     auto pointer = assign(p_data, p_size);
     if (po_pointer) { *po_pointer = pointer; }
 }
 
-PackGrannyTrackMaskType::PackGrannyTrackMaskType(const PackGrannyTrackMaskType& p_other)
+PackGrannyTrackMaskTypeV0::PackGrannyTrackMaskTypeV0(const PackGrannyTrackMaskTypeV0& p_other)
     : trackMask(p_other.trackMask)
 {
 }
 
-PackGrannyTrackMaskType& PackGrannyTrackMaskType::operator=(const PackGrannyTrackMaskType& p_other)
+PackGrannyTrackMaskTypeV0& PackGrannyTrackMaskTypeV0::operator=(const PackGrannyTrackMaskTypeV0& p_other)
 {
     trackMask = p_other.trackMask;
     return *this;
 }
 
-const byte* PackGrannyTrackMaskType::assign(const byte* p_data, uint32 p_size)
+const byte* PackGrannyTrackMaskTypeV0::assign(const byte* p_data, uint32 p_size)
 {
     p_data = helpers::read(p_data, p_size, trackMask);
     return p_data;

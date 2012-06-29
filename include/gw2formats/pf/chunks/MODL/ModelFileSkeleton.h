@@ -22,44 +22,44 @@ namespace gw2f {
 namespace pf {
 namespace chunks {
 
-GW2FORMATS_API struct ModelTransformData
+GW2FORMATS_API struct ModelTransformDataV0
 {
-    dword Flags;
-    float3 Position;
-    float4 Orientation;
-    float3 ScaleShear[3];
+    dword flags;
+    float3 position;
+    float4 orientation;
+    float3 scaleShear[3];
 public:
-    ModelTransformData();
-    ModelTransformData(const byte* p_data, uint32 p_size, const byte** po_pointer = nullptr);
-    ModelTransformData(const ModelTransformData& p_other);
-    ModelTransformData& operator=(const ModelTransformData& p_other);
+    ModelTransformDataV0();
+    ModelTransformDataV0(const byte* p_data, uint32 p_size, const byte** po_pointer = nullptr);
+    ModelTransformDataV0(const ModelTransformDataV0& p_other);
+    ModelTransformDataV0& operator=(const ModelTransformDataV0& p_other);
     const byte* assign(const byte* p_data, uint32 p_size);
 };
 
-GW2FORMATS_API struct ModelBoneData
+GW2FORMATS_API struct ModelBoneDataV0
 {
-    helpers::String Name;
-    dword ParentIndex;
-    ModelTransformData LocalTransform;
-    float4 InverseWorld4x4[4];
-    float LODError;
-    helpers::Ptr<byte> ExtendedDataType;
-    helpers::Ptr<byte> ExtendedDataObject;
+    helpers::String name;
+    dword parentIndex;
+    ModelTransformDataV0 localTransform;
+    float4 inverseWorld4x4[4];
+    float lodError;
+    helpers::Ptr<byte> extendedDataType;
+    helpers::Ptr<byte> extendedDataObject;
 public:
-    ModelBoneData();
-    ModelBoneData(const byte* p_data, uint32 p_size, const byte** po_pointer = nullptr);
-    ModelBoneData(const ModelBoneData& p_other);
-    ModelBoneData& operator=(const ModelBoneData& p_other);
+    ModelBoneDataV0();
+    ModelBoneDataV0(const byte* p_data, uint32 p_size, const byte** po_pointer = nullptr);
+    ModelBoneDataV0(const ModelBoneDataV0& p_other);
+    ModelBoneDataV0& operator=(const ModelBoneDataV0& p_other);
     const byte* assign(const byte* p_data, uint32 p_size);
 };
 
 GW2FORMATS_API struct ModelGrannySkeletonV1
 {
-    helpers::String Name;
-    helpers::Array<ModelBoneData> Bones;
-    dword LODType;
-    helpers::Ptr<byte> ExtendedDataType;
-    helpers::Ptr<byte> ExtendedDataObject;
+    helpers::String name;
+    helpers::Array<ModelBoneDataV0> bones;
+    dword lodType;
+    helpers::Ptr<byte> extendedDataType;
+    helpers::Ptr<byte> extendedDataObject;
 public:
     ModelGrannySkeletonV1();
     ModelGrannySkeletonV1(const byte* p_data, uint32 p_size, const byte** po_pointer = nullptr);
@@ -68,25 +68,25 @@ public:
     const byte* assign(const byte* p_data, uint32 p_size);
 };
 
-GW2FORMATS_API struct ModelMeshBindingData
+GW2FORMATS_API struct ModelMeshBindingDataV0
 {
-    helpers::Ptr<byte> Mesh;
+    helpers::Ptr<byte> mesh;
 public:
-    ModelMeshBindingData();
-    ModelMeshBindingData(const byte* p_data, uint32 p_size, const byte** po_pointer = nullptr);
-    ModelMeshBindingData(const ModelMeshBindingData& p_other);
-    ModelMeshBindingData& operator=(const ModelMeshBindingData& p_other);
+    ModelMeshBindingDataV0();
+    ModelMeshBindingDataV0(const byte* p_data, uint32 p_size, const byte** po_pointer = nullptr);
+    ModelMeshBindingDataV0(const ModelMeshBindingDataV0& p_other);
+    ModelMeshBindingDataV0& operator=(const ModelMeshBindingDataV0& p_other);
     const byte* assign(const byte* p_data, uint32 p_size);
 };
 
 GW2FORMATS_API struct ModelGrannyModelV1
 {
-    helpers::String Name;
-    helpers::Ptr<ModelGrannySkeletonV1> Skeleton;
-    ModelTransformData InitialPlacement;
-    helpers::Array<ModelMeshBindingData> MeshBindings;
-    helpers::Ptr<byte> ExtendedDataType;
-    helpers::Ptr<byte> ExtendedDataObject;
+    helpers::String name;
+    helpers::Ptr<ModelGrannySkeletonV1> skeleton;
+    ModelTransformDataV0 initialPlacement;
+    helpers::Array<ModelMeshBindingDataV0> meshBindings;
+    helpers::Ptr<byte> extendedDataType;
+    helpers::Ptr<byte> extendedDataObject;
 public:
     ModelGrannyModelV1();
     ModelGrannyModelV1(const byte* p_data, uint32 p_size, const byte** po_pointer = nullptr);
@@ -141,31 +141,31 @@ public:
     const byte* assign(const byte* p_data, uint32 p_size);
 };
 
-GW2FORMATS_API struct PackGrannyMirrorSpecType
+GW2FORMATS_API struct PackGrannyMirrorSpecTypeV0
 {
     helpers::Array<byte> mirrorSpec;
 public:
-    PackGrannyMirrorSpecType();
-    PackGrannyMirrorSpecType(const byte* p_data, uint32 p_size, const byte** po_pointer = nullptr);
-    PackGrannyMirrorSpecType(const PackGrannyMirrorSpecType& p_other);
-    PackGrannyMirrorSpecType& operator=(const PackGrannyMirrorSpecType& p_other);
+    PackGrannyMirrorSpecTypeV0();
+    PackGrannyMirrorSpecTypeV0(const byte* p_data, uint32 p_size, const byte** po_pointer = nullptr);
+    PackGrannyMirrorSpecTypeV0(const PackGrannyMirrorSpecTypeV0& p_other);
+    PackGrannyMirrorSpecTypeV0& operator=(const PackGrannyMirrorSpecTypeV0& p_other);
     const byte* assign(const byte* p_data, uint32 p_size);
 };
 
-GW2FORMATS_API struct PackGrannyTrackMaskType
+GW2FORMATS_API struct PackGrannyTrackMaskTypeV0
 {
     helpers::Array<byte> trackMask;
 public:
-    PackGrannyTrackMaskType();
-    PackGrannyTrackMaskType(const byte* p_data, uint32 p_size, const byte** po_pointer = nullptr);
-    PackGrannyTrackMaskType(const PackGrannyTrackMaskType& p_other);
-    PackGrannyTrackMaskType& operator=(const PackGrannyTrackMaskType& p_other);
+    PackGrannyTrackMaskTypeV0();
+    PackGrannyTrackMaskTypeV0(const byte* p_data, uint32 p_size, const byte** po_pointer = nullptr);
+    PackGrannyTrackMaskTypeV0(const PackGrannyTrackMaskTypeV0& p_other);
+    PackGrannyTrackMaskTypeV0& operator=(const PackGrannyTrackMaskTypeV0& p_other);
     const byte* assign(const byte* p_data, uint32 p_size);
 };
 
 GW2FORMATS_API struct ModelTrackMaskV63
 {
-    PackGrannyTrackMaskType data;
+    PackGrannyTrackMaskTypeV0 data;
     qword token;
 public:
     ModelTrackMaskV63();
@@ -180,7 +180,7 @@ GW2FORMATS_API struct ModelSkeletonDataV63
     helpers::Ptr<ModelGrannyModelV1> grannyModel;
     helpers::Array<ModelBoneConstraintV63> boneConstraints;
     helpers::Array<dword> boneFlags;
-    PackGrannyMirrorSpecType mirrorSpec;
+    PackGrannyMirrorSpecTypeV0 mirrorSpec;
     helpers::Array<dword> emitterBones;
     helpers::Array<ModelTrackMaskV63> trackMasks;
 public:
