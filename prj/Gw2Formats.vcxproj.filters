@@ -52,6 +52,18 @@
     <Filter Include="Source Files\pf\chunks\MODL">
       <UniqueIdentifier>{99d541e0-8c58-4700-a1f9-9c1b83b5455c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\!external\pf\chunks\txtm">
+      <UniqueIdentifier>{dbecd905-e55a-49c4-8952-12886ef7a08b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pf\chunks\txtm">
+      <UniqueIdentifier>{ef972e57-e763-4714-8a39-c386ccb6ad3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\!external\pf\chunks\PIMG">
+      <UniqueIdentifier>{761ef4ef-20a9-4088-9552-a0ea1aa2fe9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pf\chunks\PIMG">
+      <UniqueIdentifier>{40c36e3b-d73b-43e1-9645-a675a0728c61}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\gw2formats\base.h">
@@ -135,6 +147,18 @@
     <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\ModelFileSkeleton.h">
       <Filter>Header Files\!external\pf\chunks\MODL</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\txtm\TextPackManifest.h">
+      <Filter>Header Files\!external\pf\chunks\txtm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\TextManifestPackFile.h">
+      <Filter>Header Files\!external\pf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\PagedImagePackFile.h">
+      <Filter>Header Files\!external\pf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\PIMG\PagedImageTableData.h">
+      <Filter>Header Files\!external\pf\chunks\PIMG</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\pf\helpers\FileReference.cpp">
@@ -172,6 +196,12 @@
     </ClCompile>
     <ClCompile Include="..\src\pf\chunks\MODL\ModelFileSkeleton.cpp">
       <Filter>Source Files\pf\chunks\MODL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\chunks\txtm\TextPackManifest.cpp">
+      <Filter>Source Files\pf\chunks\txtm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\chunks\PIMG\PagedImageTableData.cpp">
+      <Filter>Source Files\pf\chunks\PIMG</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

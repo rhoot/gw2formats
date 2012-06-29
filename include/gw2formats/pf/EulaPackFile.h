@@ -11,11 +11,11 @@
 #include <gw2formats/pf/chunks/eula/PackEula.h>
 
 namespace gw2f {
-    namespace pf {
+namespace pf {
 
-        typedef PackFile<fcc::eula> EulaPackFile;
+typedef PackFile<fcc::eula> EulaPackFile;
 
-    }; // namespace pf
+}; // namespace pf
 }; // namespace gw2formats
 
 #endif // GW2FORMATS_PF_EULAPACKFILE_H_INCLUDED

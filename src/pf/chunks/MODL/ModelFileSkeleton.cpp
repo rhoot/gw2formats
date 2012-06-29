@@ -7,7 +7,7 @@ namespace pf {
 namespace chunks {
 
 //============================================================================/
-//      ModelTransformData
+//      ModelTransformDataV0
 //============================================================================/
 
 ModelTransformDataV0::ModelTransformDataV0()
@@ -48,7 +48,7 @@ const byte* ModelTransformDataV0::assign(const byte* p_data, uint32 p_size)
 }
 
 //============================================================================/
-//      ModelBoneData
+//      ModelBoneDataV0
 //============================================================================/
 
 ModelBoneDataV0::ModelBoneDataV0()
@@ -143,7 +143,7 @@ const byte* ModelGrannySkeletonV1::assign(const byte* p_data, uint32 p_size)
 }
 
 //============================================================================/
-//      ModelMeshBindingData
+//      ModelMeshBindingDataV0
 //============================================================================/
 
 ModelMeshBindingDataV0::ModelMeshBindingDataV0()
@@ -374,7 +374,7 @@ const byte* ModelBoneConstraintV63::assign(const byte* p_data, uint32 p_size)
 }
 
 //============================================================================/
-//      PackGrannyMirrorSpecType
+//      PackGrannyMirrorSpecTypeV0
 //============================================================================/
 
 PackGrannyMirrorSpecTypeV0::PackGrannyMirrorSpecTypeV0()
@@ -405,7 +405,7 @@ const byte* PackGrannyMirrorSpecTypeV0::assign(const byte* p_data, uint32 p_size
 }
 
 //============================================================================/
-//      PackGrannyTrackMaskType
+//      PackGrannyTrackMaskTypeV0
 //============================================================================/
 
 PackGrannyTrackMaskTypeV0::PackGrannyTrackMaskTypeV0()

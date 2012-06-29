@@ -18,9 +18,12 @@ enum FourCC
     GEOM = 0x4d4f4547,
     GRMT = 0x544d5247,
     MODL = 0x4c444f4d,
+    PGTB = 0x42544750,
+    PIMG = 0x474d4950,
     PRPS = 0x53505250,
     ROOT = 0x544f4f52,
     SKEL = 0x4c454b53,
+    txtm = 0x6d747874,
 
 };
 

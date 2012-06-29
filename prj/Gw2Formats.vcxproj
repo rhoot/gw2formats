@@ -24,6 +24,8 @@
     <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\ModelFileProperties.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\ModelFileRootMotion.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\ModelFileSkeleton.h" />
+    <ClInclude Include="..\include\gw2formats\pf\chunks\PIMG\PagedImageTableData.h" />
+    <ClInclude Include="..\include\gw2formats\pf\chunks\txtm\TextPackManifest.h" />
     <ClInclude Include="..\include\gw2formats\pf\EulaPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\helpers\Array.h" />
     <ClInclude Include="..\include\gw2formats\pf\helpers\FileName.h" />
@@ -38,6 +40,8 @@
     <ClInclude Include="..\include\gw2formats\pf\MaterialPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\ModelPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\PackFile.h" />
+    <ClInclude Include="..\include\gw2formats\pf\PagedImagePackFile.h" />
+    <ClInclude Include="..\include\gw2formats\pf\TextManifestPackFile.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\pf\chunks\AMAT\AmatDx9Material.cpp" />
@@ -50,6 +54,8 @@
     <ClCompile Include="..\src\pf\chunks\MODL\ModelFileProperties.cpp" />
     <ClCompile Include="..\src\pf\chunks\MODL\ModelFileRootMotion.cpp" />
     <ClCompile Include="..\src\pf\chunks\MODL\ModelFileSkeleton.cpp" />
+    <ClCompile Include="..\src\pf\chunks\PIMG\PagedImageTableData.cpp" />
+    <ClCompile Include="..\src\pf\chunks\txtm\TextPackManifest.cpp" />
     <ClCompile Include="..\src\pf\helpers\FileName.cpp" />
     <ClCompile Include="..\src\pf\helpers\FileReference.cpp" />
   </ItemGroup>
