@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\!external">
+      <UniqueIdentifier>{72038f1a-548c-400f-a0f5-4b61fa6dc308}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\!external\pf">
+      <UniqueIdentifier>{9ac2a60f-f6ec-4805-9812-14a3a3a37457}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\!external\pf\helpers">
+      <UniqueIdentifier>{16f807a2-bcee-41f7-9f54-eba9aeff4e5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\!external\pf\chunks">
+      <UniqueIdentifier>{099287d9-6ac9-4583-81a6-35dbf7437838}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pf">
+      <UniqueIdentifier>{5f3ac3e3-95a4-4c60-a4b0-c996abc3dab7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pf\chunks">
+      <UniqueIdentifier>{ca1fa5cd-c1a8-40ce-babe-b069076c2f30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pf\helpers">
+      <UniqueIdentifier>{83bf54f7-7309-4cf4-8b03-1b07608c2bb3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\gw2formats\base.h">
+      <Filter>Header Files\!external</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\PackFile.h">
+      <Filter>Header Files\!external\pf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\fcc.h">
+      <Filter>Header Files\!external</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\ChunkFactory.h">
+      <Filter>Header Files\!external\pf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\ModelPackFile.h">
+      <Filter>Header Files\!external\pf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\MaterialPackFile.h">
+      <Filter>Header Files\!external\pf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\helpers\Array.h">
+      <Filter>Header Files\!external\pf\helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\helpers\read.h">
+      <Filter>Header Files\!external\pf\helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\helpers\Ptr.h">
+      <Filter>Header Files\!external\pf\helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\helpers\RefList.h">
+      <Filter>Header Files\!external\pf\helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\helpers\StringBase.h">
+      <Filter>Header Files\!external\pf\helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\helpers\String.h">
+      <Filter>Header Files\!external\pf\helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\helpers\WString.h">
+      <Filter>Header Files\!external\pf\helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\helpers\Vector.h">
+      <Filter>Header Files\!external\pf\helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\AmatGr.h">
+      <Filter>Header Files\!external\pf\chunks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\EulaPackFile.h">
+      <Filter>Header Files\!external\pf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\PackEula.h">
+      <Filter>Header Files\!external\pf\chunks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\AmatDx9Material.h">
+      <Filter>Header Files\!external\pf\chunks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\ModelFileData.h">
+      <Filter>Header Files\!external\pf\chunks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\helpers\FileName.h">
+      <Filter>Header Files\!external\pf\helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\helpers\FileReference.h">
+      <Filter>Header Files\!external\pf\helpers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\pf\chunks\AmatGr.cpp">
+      <Filter>Source Files\pf\chunks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\chunks\AmatDx9Material.cpp">
+      <Filter>Source Files\pf\chunks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\chunks\PackEula.cpp">
+      <Filter>Source Files\pf\chunks</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\helpers\FileReference.cpp">
+      <Filter>Source Files\pf\helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\helpers\FileName.cpp">
+      <Filter>Source Files\pf\helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\chunks\ModelFileData.cpp">
+      <Filter>Source Files\pf\chunks</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

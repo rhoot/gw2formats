@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Gw2Formats", "Gw2Formats.vcxproj", "{C59C7548-51B5-496B-9B74-BE454AA4C8A2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EulaSample", "EulaSample.vcxproj", "{3F5F3262-265A-4D17-8D1E-5981619877BF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C59C7548-51B5-496B-9B74-BE454AA4C8A2} = {C59C7548-51B5-496B-9B74-BE454AA4C8A2}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestFormat", "TestFormat.vcxproj", "{7343837E-7881-4484-BEAE-4D947AA07516}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C59C7548-51B5-496B-9B74-BE454AA4C8A2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C59C7548-51B5-496B-9B74-BE454AA4C8A2}.Debug|Win32.Build.0 = Debug|Win32
+		{C59C7548-51B5-496B-9B74-BE454AA4C8A2}.Release|Win32.ActiveCfg = Release|Win32
+		{C59C7548-51B5-496B-9B74-BE454AA4C8A2}.Release|Win32.Build.0 = Release|Win32
+		{3F5F3262-265A-4D17-8D1E-5981619877BF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3F5F3262-265A-4D17-8D1E-5981619877BF}.Debug|Win32.Build.0 = Debug|Win32
+		{3F5F3262-265A-4D17-8D1E-5981619877BF}.Release|Win32.ActiveCfg = Release|Win32
+		{3F5F3262-265A-4D17-8D1E-5981619877BF}.Release|Win32.Build.0 = Release|Win32
+		{7343837E-7881-4484-BEAE-4D947AA07516}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7343837E-7881-4484-BEAE-4D947AA07516}.Debug|Win32.Build.0 = Debug|Win32
+		{7343837E-7881-4484-BEAE-4D947AA07516}.Release|Win32.ActiveCfg = Release|Win32
+		{7343837E-7881-4484-BEAE-4D947AA07516}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\gw2formats\base.h" />
+    <ClInclude Include="..\include\gw2formats\fcc.h" />
+    <ClInclude Include="..\include\gw2formats\pf\ChunkFactory.h" />
+    <ClInclude Include="..\include\gw2formats\pf\chunks\AmatGr.h" />
+    <ClInclude Include="..\include\gw2formats\pf\chunks\ModelFileData.h" />
+    <ClInclude Include="..\include\gw2formats\pf\chunks\PackEula.h" />
+    <ClInclude Include="..\include\gw2formats\pf\EulaPackFile.h" />
+    <ClInclude Include="..\include\gw2formats\pf\helpers\Array.h" />
+    <ClInclude Include="..\include\gw2formats\pf\helpers\FileName.h" />
+    <ClInclude Include="..\include\gw2formats\pf\helpers\FileReference.h" />
+    <ClInclude Include="..\include\gw2formats\pf\helpers\Ptr.h" />
+    <ClInclude Include="..\include\gw2formats\pf\helpers\read.h" />
+    <ClInclude Include="..\include\gw2formats\pf\helpers\RefList.h" />
+    <ClInclude Include="..\include\gw2formats\pf\helpers\String.h" />
+    <ClInclude Include="..\include\gw2formats\pf\helpers\StringBase.h" />
+    <ClInclude Include="..\include\gw2formats\pf\helpers\Vector.h" />
+    <ClInclude Include="..\include\gw2formats\pf\helpers\WString.h" />
+    <ClInclude Include="..\include\gw2formats\pf\MaterialPackFile.h" />
+    <ClInclude Include="..\include\gw2formats\pf\ModelPackFile.h" />
+    <ClInclude Include="..\include\gw2formats\pf\PackFile.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\pf\chunks\ModelFileData.cpp" />
+    <ClCompile Include="..\src\pf\helpers\FileName.cpp" />
+    <ClCompile Include="..\src\pf\helpers\FileReference.cpp" />
+    <ClInclude Include="..\include\gw2formats\pf\chunks\AmatDx9Material.h" />
+    <ClCompile Include="..\src\pf\chunks\AmatDx9Material.cpp" />
+    <ClCompile Include="..\src\pf\chunks\AmatGr.cpp" />
+    <ClCompile Include="..\src\pf\chunks\PackEula.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C59C7548-51B5-496B-9B74-BE454AA4C8A2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Gw2Formats</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)..\lib\$(PlatformShortName)\</OutDir>
+    <TargetName>$(ProjectName)-d</TargetName>
+    <IntDir>$(SolutionDir)..\build\$(ProjectName)\$(Configuration)_$(PlatformShortName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)..\lib\$(PlatformShortName)\</OutDir>
+    <IntDir>$(SolutionDir)..\build\$(ProjectName)\$(Configuration)_$(PlatformShortName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\include;$(ProjectDir)..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\include;$(ProjectDir)..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+      <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
