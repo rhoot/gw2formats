@@ -21,6 +21,9 @@
     <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\ModelFileAnimation.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\ModelFileData.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\ModelFileGeometry.h" />
+    <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\ModelFileProperties.h" />
+    <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\ModelFileRootMotion.h" />
+    <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\ModelFileSkeleton.h" />
     <ClInclude Include="..\include\gw2formats\pf\EulaPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\helpers\Array.h" />
     <ClInclude Include="..\include\gw2formats\pf\helpers\FileName.h" />
@@ -44,6 +47,9 @@
     <ClCompile Include="..\src\pf\chunks\MODL\ModelFileAnimation.cpp" />
     <ClCompile Include="..\src\pf\chunks\MODL\ModelFileData.cpp" />
     <ClCompile Include="..\src\pf\chunks\MODL\ModelFileGeometry.cpp" />
+    <ClCompile Include="..\src\pf\chunks\MODL\ModelFileProperties.cpp" />
+    <ClCompile Include="..\src\pf\chunks\MODL\ModelFileRootMotion.cpp" />
+    <ClCompile Include="..\src\pf\chunks\MODL\ModelFileSkeleton.cpp" />
     <ClCompile Include="..\src\pf\helpers\FileName.cpp" />
     <ClCompile Include="..\src\pf\helpers\FileReference.cpp" />
   </ItemGroup>

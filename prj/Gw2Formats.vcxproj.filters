@@ -126,6 +126,15 @@
     <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\ModelFileAnimation.h">
       <Filter>Header Files\!external\pf\chunks\MODL</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\ModelFileProperties.h">
+      <Filter>Header Files\!external\pf\chunks\MODL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\ModelFileRootMotion.h">
+      <Filter>Header Files\!external\pf\chunks\MODL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\ModelFileSkeleton.h">
+      <Filter>Header Files\!external\pf\chunks\MODL</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\pf\helpers\FileReference.cpp">
@@ -153,6 +162,15 @@
       <Filter>Source Files\pf\chunks\MODL</Filter>
     </ClCompile>
     <ClCompile Include="..\src\pf\chunks\MODL\ModelFileAnimation.cpp">
+      <Filter>Source Files\pf\chunks\MODL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\chunks\MODL\ModelFileProperties.cpp">
+      <Filter>Source Files\pf\chunks\MODL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\chunks\MODL\ModelFileRootMotion.cpp">
+      <Filter>Source Files\pf\chunks\MODL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\chunks\MODL\ModelFileSkeleton.cpp">
       <Filter>Source Files\pf\chunks\MODL</Filter>
     </ClCompile>
   </ItemGroup>

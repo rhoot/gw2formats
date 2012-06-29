@@ -50,12 +50,15 @@ public:
         if (p_size < sizeof(int32)) { throw std::invalid_argument("p_size must be large enough to contain one 32-bit integer."); }
 
         auto offset  = *reinterpret_cast<const int32*>(p_data);
-        auto pointer = p_data + offset;
-        auto end     = p_data + p_size;
-        uint32 size  = (end - pointer);
 
-        if (pointer >= end) { throw std::out_of_range("pointer went past the end of the buffer."); }
-        read(pointer, size, m_data);
+        if (offset != 0) {
+            auto pointer = p_data + offset;
+            auto end     = p_data + p_size;
+            uint32 size  = (end - pointer);
+
+            if (pointer >= end) { throw std::out_of_range("pointer went past the end of the buffer."); }
+            read(pointer, size, m_data);
+        }
 
         return p_data + sizeof(offset);
     }

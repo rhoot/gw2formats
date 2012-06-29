@@ -11,6 +11,9 @@
 #include <gw2formats/pf/chunks/MODL/ModelFileAnimation.h>
 #include <gw2formats/pf/chunks/MODL/ModelFileData.h>
 #include <gw2formats/pf/chunks/MODL/ModelFileGeometry.h>
+#include <gw2formats/pf/chunks/MODL/ModelFileProperties.h>
+#include <gw2formats/pf/chunks/MODL/ModelFileRootMotion.h>
+#include <gw2formats/pf/chunks/MODL/ModelFileSkeleton.h>
 
 namespace gw2f {
 namespace pf {
