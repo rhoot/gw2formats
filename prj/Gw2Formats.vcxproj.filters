@@ -136,6 +136,18 @@
     <Filter Include="Source Files\pf\chunks\AMSP">
       <UniqueIdentifier>{25b72085-60cb-454e-95ab-af3a11c43f23}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\!external\pf\chunks\prlt">
+      <UniqueIdentifier>{e10f625a-87f9-4f2c-87d3-b0f78e64bd69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pf\chunks\mfst">
+      <UniqueIdentifier>{017dbd82-cf71-4e4d-81b1-8c4cd055d7b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\!external\pf\chunks\cmpc">
+      <UniqueIdentifier>{5d3f9dc2-7d25-4567-a9fa-7017a1778bab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pf\chunks\cmpc">
+      <UniqueIdentifier>{08b581d8-18a0-4919-92d9-567936e94122}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\gw2formats\base.h">
@@ -303,6 +315,18 @@
     <ClInclude Include="..\include\gw2formats\pf\chunks\AMSP\ScriptFileData.h">
       <Filter>Header Files\!external\pf\chunks\AMSP</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\PortalManifestPackFile.h">
+      <Filter>Header Files\!external\pf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\prlt\ContentPortalManifest.h">
+      <Filter>Header Files\!external\pf\chunks\prlt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\CompositePackFile.h">
+      <Filter>Header Files\!external\pf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\cmpc\PackComposite.h">
+      <Filter>Header Files\!external\pf\chunks\cmpc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\pf\helpers\FileReference.cpp">
@@ -382,6 +406,12 @@
     </ClCompile>
     <ClCompile Include="..\src\pf\chunks\AMSP\ScriptFileData.cpp">
       <Filter>Source Files\pf\chunks\AMSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\chunks\prlt\ContentPortalManifest.cpp">
+      <Filter>Source Files\pf\chunks\mfst</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\chunks\cmpc\PackComposite.cpp">
+      <Filter>Source Files\pf\chunks\cmpc</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

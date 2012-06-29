@@ -24,6 +24,7 @@
     <ClInclude Include="..\include\gw2formats\pf\chunks\AMSP\ScriptFileData.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\ASND\WaveformData.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\cmaC\CollideModelManifest.h" />
+    <ClInclude Include="..\include\gw2formats\pf\chunks\cmpc\PackComposite.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\cntc\PackContent.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\emoc\PackEmoteAnimations.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\eula\PackEula.h" />
@@ -38,10 +39,12 @@
     <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\ModelFileSkeleton.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\mpsd\PackMapShadow.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\PIMG\PagedImageTableData.h" />
+    <ClInclude Include="..\include\gw2formats\pf\chunks\prlt\ContentPortalManifest.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\txtm\TextPackManifest.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\txtV\TextPackVariants.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\txtv_\TextPackVoices.h" />
     <ClInclude Include="..\include\gw2formats\pf\CollideModelManifestPackFile.h" />
+    <ClInclude Include="..\include\gw2formats\pf\CompositePackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\ContentManifestPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\EmoteAnimPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\EulaPackFile.h" />
@@ -62,6 +65,7 @@
     <ClInclude Include="..\include\gw2formats\pf\ModelPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\PackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\PagedImagePackFile.h" />
+    <ClInclude Include="..\include\gw2formats\pf\PortalManifestPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\ScriptPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\TextManifestPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\TextVariantPackFile.h" />
@@ -75,6 +79,7 @@
     <ClCompile Include="..\src\pf\chunks\AMSP\ScriptFileData.cpp" />
     <ClCompile Include="..\src\pf\chunks\ASND\WaveformData.cpp" />
     <ClCompile Include="..\src\pf\chunks\cmaC\CollideModelManifest.cpp" />
+    <ClCompile Include="..\src\pf\chunks\cmpc\PackComposite.cpp" />
     <ClCompile Include="..\src\pf\chunks\cntc\PackContent.cpp" />
     <ClCompile Include="..\src\pf\chunks\emoc\PackEmoteAnimations.cpp" />
     <ClCompile Include="..\src\pf\chunks\eula\PackEula.cpp" />
@@ -89,6 +94,7 @@
     <ClCompile Include="..\src\pf\chunks\MODL\ModelFileSkeleton.cpp" />
     <ClCompile Include="..\src\pf\chunks\mpsd\PackMapShadow.cpp" />
     <ClCompile Include="..\src\pf\chunks\PIMG\PagedImageTableData.cpp" />
+    <ClCompile Include="..\src\pf\chunks\prlt\ContentPortalManifest.cpp" />
     <ClCompile Include="..\src\pf\chunks\txtm\TextPackManifest.cpp" />
     <ClCompile Include="..\src\pf\chunks\txtV\TextPackVariants.cpp" />
     <ClCompile Include="..\src\pf\chunks\txtv_\TextPackVoices.cpp" />
