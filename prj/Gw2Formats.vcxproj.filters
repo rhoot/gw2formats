@@ -88,6 +88,36 @@
     <Filter Include="Source Files\pf\chunks\ABIX">
       <UniqueIdentifier>{dd000bf9-4392-4fd6-b709-b4fc5e8b1dca}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\!external\pf\chunks\txtV">
+      <UniqueIdentifier>{eb72eabd-b320-40a0-8062-ca8e78875c1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pf\chunks\txtV">
+      <UniqueIdentifier>{5645b35e-c65d-4d08-b202-9a2e7b3442b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\!external\pf\chunks\txtv_">
+      <UniqueIdentifier>{76c9aaef-f3cb-4bf2-8c93-662bea728e7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pf\chunks\txtv_">
+      <UniqueIdentifier>{6c8cfe2b-9b21-4bbf-af74-977d9088e9a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\!external\pf\chunks\mpsd">
+      <UniqueIdentifier>{fbd7b93b-3176-4809-9398-65187920f916}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pf\chunks\mpsd">
+      <UniqueIdentifier>{7e5058f2-ec41-4841-bfac-9c03817a04fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\!external\pf\chunks\mMet">
+      <UniqueIdentifier>{57586266-a364-46af-a2aa-d31e00ce9fa6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pf\chunks\mMet">
+      <UniqueIdentifier>{07139149-64ec-4823-819c-7ab2796c19d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\!external\pf\chunks\emoc">
+      <UniqueIdentifier>{ae650402-85b5-4f88-a2fb-0094d44fe656}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pf\chunks\emoc">
+      <UniqueIdentifier>{6d5d254e-adbd-466f-a741-f61aca91f169}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\gw2formats\base.h">
@@ -207,6 +237,36 @@
     <ClInclude Include="..\include\gw2formats\pf\chunks\ABIX\BankIndexData.h">
       <Filter>Header Files\!external\pf\chunks\ABIX</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\txtV\TextPackVariants.h">
+      <Filter>Header Files\!external\pf\chunks\txtV</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\TextVariantPackFile.h">
+      <Filter>Header Files\!external\pf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\TextVoicePackFile.h">
+      <Filter>Header Files\!external\pf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\txtv_\TextPackVoices.h">
+      <Filter>Header Files\!external\pf\chunks\txtv_</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\MapShadowPackFile.h">
+      <Filter>Header Files\!external\pf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\mpsd\PackMapShadow.h">
+      <Filter>Header Files\!external\pf\chunks\mpsd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\MapMetadataPackFile.h">
+      <Filter>Header Files\!external\pf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\mMet\PackMapMetadata.h">
+      <Filter>Header Files\!external\pf\chunks\mMet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\EmoteAnimPackFile.h">
+      <Filter>Header Files\!external\pf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\emoc\PackEmoteAnimations.h">
+      <Filter>Header Files\!external\pf\chunks\emoc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\pf\helpers\FileReference.cpp">
@@ -262,6 +322,21 @@
     </ClCompile>
     <ClCompile Include="..\src\pf\chunks\ABIX\BankIndexData.cpp">
       <Filter>Source Files\pf\chunks\ABIX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\chunks\txtV\TextPackVariants.cpp">
+      <Filter>Source Files\pf\chunks\txtV</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\chunks\txtv_\TextPackVoices.cpp">
+      <Filter>Source Files\pf\chunks\txtv_</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\chunks\mpsd\PackMapShadow.cpp">
+      <Filter>Source Files\pf\chunks\mpsd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\chunks\mMet\PackMapMetadata.cpp">
+      <Filter>Source Files\pf\chunks\mMet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\chunks\emoc\PackEmoteAnimations.cpp">
+      <Filter>Source Files\pf\chunks\emoc</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

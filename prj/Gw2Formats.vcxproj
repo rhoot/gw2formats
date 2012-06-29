@@ -22,8 +22,10 @@
     <ClInclude Include="..\include\gw2formats\pf\chunks\AMAT\AmatDx9Material.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\AMAT\AmatGr.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\ASND\WaveformData.h" />
+    <ClInclude Include="..\include\gw2formats\pf\chunks\emoc\PackEmoteAnimations.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\eula\PackEula.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\hvkC\PackMapCollide.h" />
+    <ClInclude Include="..\include\gw2formats\pf\chunks\mMet\PackMapMetadata.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\common.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\ModelFileAnimation.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\ModelFileData.h" />
@@ -31,8 +33,12 @@
     <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\ModelFileProperties.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\ModelFileRootMotion.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\ModelFileSkeleton.h" />
+    <ClInclude Include="..\include\gw2formats\pf\chunks\mpsd\PackMapShadow.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\PIMG\PagedImageTableData.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\txtm\TextPackManifest.h" />
+    <ClInclude Include="..\include\gw2formats\pf\chunks\txtV\TextPackVariants.h" />
+    <ClInclude Include="..\include\gw2formats\pf\chunks\txtv_\TextPackVoices.h" />
+    <ClInclude Include="..\include\gw2formats\pf\EmoteAnimPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\EulaPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\HavokPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\helpers\Array.h" />
@@ -45,11 +51,15 @@
     <ClInclude Include="..\include\gw2formats\pf\helpers\StringBase.h" />
     <ClInclude Include="..\include\gw2formats\pf\helpers\Vector.h" />
     <ClInclude Include="..\include\gw2formats\pf\helpers\WString.h" />
+    <ClInclude Include="..\include\gw2formats\pf\MapMetadataPackFile.h" />
+    <ClInclude Include="..\include\gw2formats\pf\MapShadowPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\MaterialPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\ModelPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\PackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\PagedImagePackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\TextManifestPackFile.h" />
+    <ClInclude Include="..\include\gw2formats\pf\TextVariantPackFile.h" />
+    <ClInclude Include="..\include\gw2formats\pf\TextVoicePackFile.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\pf\chunks\ABIX\BankIndexData.cpp" />
@@ -57,8 +67,10 @@
     <ClCompile Include="..\src\pf\chunks\AMAT\AmatDx9Material.cpp" />
     <ClCompile Include="..\src\pf\chunks\AMAT\AmatGr.cpp" />
     <ClCompile Include="..\src\pf\chunks\ASND\WaveformData.cpp" />
+    <ClCompile Include="..\src\pf\chunks\emoc\PackEmoteAnimations.cpp" />
     <ClCompile Include="..\src\pf\chunks\eula\PackEula.cpp" />
     <ClCompile Include="..\src\pf\chunks\hvkC\PackMapCollide.cpp" />
+    <ClCompile Include="..\src\pf\chunks\mMet\PackMapMetadata.cpp" />
     <ClCompile Include="..\src\pf\chunks\MODL\common.cpp" />
     <ClCompile Include="..\src\pf\chunks\MODL\ModelFileAnimation.cpp" />
     <ClCompile Include="..\src\pf\chunks\MODL\ModelFileData.cpp" />
@@ -66,8 +78,11 @@
     <ClCompile Include="..\src\pf\chunks\MODL\ModelFileProperties.cpp" />
     <ClCompile Include="..\src\pf\chunks\MODL\ModelFileRootMotion.cpp" />
     <ClCompile Include="..\src\pf\chunks\MODL\ModelFileSkeleton.cpp" />
+    <ClCompile Include="..\src\pf\chunks\mpsd\PackMapShadow.cpp" />
     <ClCompile Include="..\src\pf\chunks\PIMG\PagedImageTableData.cpp" />
     <ClCompile Include="..\src\pf\chunks\txtm\TextPackManifest.cpp" />
+    <ClCompile Include="..\src\pf\chunks\txtV\TextPackVariants.cpp" />
+    <ClCompile Include="..\src\pf\chunks\txtv_\TextPackVoices.cpp" />
     <ClCompile Include="..\src\pf\helpers\FileName.cpp" />
     <ClCompile Include="..\src\pf\helpers\FileReference.cpp" />
   </ItemGroup>
