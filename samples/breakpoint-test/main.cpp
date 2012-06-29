@@ -1,9 +1,9 @@
 
-#include <gw2formats/pf/EmoteAnimPackFile.h>
+#include <gw2formats/pf/ScriptPackFile.h>
 
 int main(int argc, char** argv)
 {
-    gw2f::pf::EmoteAnimPackFile file(argv[1]);
-    auto chunk = file.chunk<gw2f::fcc::anim>();
+    gw2f::pf::ScriptPackFile file(argv[1]);
+    auto chunk = file.chunk<gw2f::fcc::AMSP>();
     return 0;
 }

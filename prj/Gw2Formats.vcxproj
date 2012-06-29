@@ -21,7 +21,10 @@
     <ClInclude Include="..\include\gw2formats\pf\chunks\ABNK\BankFileData.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\AMAT\AmatDx9Material.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\AMAT\AmatGr.h" />
+    <ClInclude Include="..\include\gw2formats\pf\chunks\AMSP\ScriptFileData.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\ASND\WaveformData.h" />
+    <ClInclude Include="..\include\gw2formats\pf\chunks\cmaC\CollideModelManifest.h" />
+    <ClInclude Include="..\include\gw2formats\pf\chunks\cntc\PackContent.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\emoc\PackEmoteAnimations.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\eula\PackEula.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\hvkC\PackMapCollide.h" />
@@ -38,6 +41,8 @@
     <ClInclude Include="..\include\gw2formats\pf\chunks\txtm\TextPackManifest.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\txtV\TextPackVariants.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\txtv_\TextPackVoices.h" />
+    <ClInclude Include="..\include\gw2formats\pf\CollideModelManifestPackFile.h" />
+    <ClInclude Include="..\include\gw2formats\pf\ContentManifestPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\EmoteAnimPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\EulaPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\HavokPackFile.h" />
@@ -57,6 +62,7 @@
     <ClInclude Include="..\include\gw2formats\pf\ModelPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\PackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\PagedImagePackFile.h" />
+    <ClInclude Include="..\include\gw2formats\pf\ScriptPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\TextManifestPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\TextVariantPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\TextVoicePackFile.h" />
@@ -66,7 +72,10 @@
     <ClCompile Include="..\src\pf\chunks\ABNK\BankFileData.cpp" />
     <ClCompile Include="..\src\pf\chunks\AMAT\AmatDx9Material.cpp" />
     <ClCompile Include="..\src\pf\chunks\AMAT\AmatGr.cpp" />
+    <ClCompile Include="..\src\pf\chunks\AMSP\ScriptFileData.cpp" />
     <ClCompile Include="..\src\pf\chunks\ASND\WaveformData.cpp" />
+    <ClCompile Include="..\src\pf\chunks\cmaC\CollideModelManifest.cpp" />
+    <ClCompile Include="..\src\pf\chunks\cntc\PackContent.cpp" />
     <ClCompile Include="..\src\pf\chunks\emoc\PackEmoteAnimations.cpp" />
     <ClCompile Include="..\src\pf\chunks\eula\PackEula.cpp" />
     <ClCompile Include="..\src\pf\chunks\hvkC\PackMapCollide.cpp" />

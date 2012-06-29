@@ -118,6 +118,24 @@
     <Filter Include="Source Files\pf\chunks\emoc">
       <UniqueIdentifier>{6d5d254e-adbd-466f-a741-f61aca91f169}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\!external\pf\chunks\cntc">
+      <UniqueIdentifier>{0b749cc5-16d1-4141-b9bb-67f1690d5c60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pf\chunks\cntc">
+      <UniqueIdentifier>{c4f757df-ba8a-4cb8-8b73-36e886f7d36a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\!external\pf\chunks\cmaC">
+      <UniqueIdentifier>{29bc1641-156a-4017-881b-cb566ae878a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pf\chunks\cmaC">
+      <UniqueIdentifier>{76e1ad53-c8b2-441b-a063-2e4727c5015a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\!external\pf\chunks\AMSP">
+      <UniqueIdentifier>{7fc070e4-4242-40a5-97e1-b8a54432ba6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pf\chunks\AMSP">
+      <UniqueIdentifier>{25b72085-60cb-454e-95ab-af3a11c43f23}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\gw2formats\base.h">
@@ -267,6 +285,24 @@
     <ClInclude Include="..\include\gw2formats\pf\chunks\emoc\PackEmoteAnimations.h">
       <Filter>Header Files\!external\pf\chunks\emoc</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\ContentManifestPackFile.h">
+      <Filter>Header Files\!external\pf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\cntc\PackContent.h">
+      <Filter>Header Files\!external\pf\chunks\cntc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\CollideModelManifestPackFile.h">
+      <Filter>Header Files\!external\pf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\cmaC\CollideModelManifest.h">
+      <Filter>Header Files\!external\pf\chunks\cmaC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\ScriptPackFile.h">
+      <Filter>Header Files\!external\pf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\AMSP\ScriptFileData.h">
+      <Filter>Header Files\!external\pf\chunks\AMSP</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\pf\helpers\FileReference.cpp">
@@ -337,6 +373,15 @@
     </ClCompile>
     <ClCompile Include="..\src\pf\chunks\emoc\PackEmoteAnimations.cpp">
       <Filter>Source Files\pf\chunks\emoc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\chunks\cntc\PackContent.cpp">
+      <Filter>Source Files\pf\chunks\cntc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\chunks\cmaC\CollideModelManifest.cpp">
+      <Filter>Source Files\pf\chunks\cmaC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\chunks\AMSP\ScriptFileData.cpp">
+      <Filter>Source Files\pf\chunks\AMSP</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
