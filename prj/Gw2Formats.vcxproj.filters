@@ -76,6 +76,18 @@
     <Filter Include="Source Files\pf\chunks\ABNK">
       <UniqueIdentifier>{9d809697-a8f2-4a5e-8987-edb3b30962c1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\!external\pf\chunks\hvkC">
+      <UniqueIdentifier>{0913f5c8-812e-4d74-aeb5-00b834e65313}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pf\chunks\hvkC">
+      <UniqueIdentifier>{fddd7b09-aec6-46f0-be19-105c4e6d9a1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\!external\pf\chunks\ABIX">
+      <UniqueIdentifier>{aa3e1929-a0c1-4db0-9b7f-143dced8d1b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pf\chunks\ABIX">
+      <UniqueIdentifier>{dd000bf9-4392-4fd6-b709-b4fc5e8b1dca}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\gw2formats\base.h">
@@ -183,6 +195,18 @@
     <ClInclude Include="..\include\gw2formats\pf\chunks\ABNK\BankFileData.h">
       <Filter>Header Files\!external\pf\chunks\ABNK</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\HavokPackFile.h">
+      <Filter>Header Files\!external\pf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\hvkC\PackMapCollide.h">
+      <Filter>Header Files\!external\pf\chunks\hvkC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\BankIndexPackFile.h">
+      <Filter>Header Files\!external\pf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\ABIX\BankIndexData.h">
+      <Filter>Header Files\!external\pf\chunks\ABIX</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\pf\helpers\FileReference.cpp">
@@ -232,6 +256,12 @@
     </ClCompile>
     <ClCompile Include="..\src\pf\chunks\ABNK\BankFileData.cpp">
       <Filter>Source Files\pf\chunks\ABNK</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\chunks\hvkC\PackMapCollide.cpp">
+      <Filter>Source Files\pf\chunks\hvkC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\chunks\ABIX\BankIndexData.cpp">
+      <Filter>Source Files\pf\chunks\ABIX</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -10,16 +10,19 @@ namespace fcc {
 
 enum FourCC
 {
-
+    ABIX = 0x58494241,
     ABNK = 0x4b4e4241,
     ANIM = 0x4d494e41,
     AMAT = 0x54414d41,
     ASND = 0x444e5341,
+    BIDX = 0x58444942,
     BKCK = 0x4b434b42,
     DX9S = 0x53395844,
     eula = 0x616c7565,
     GEOM = 0x4d4f4547,
     GRMT = 0x544d5247,
+    havk = 0x6b766168,
+    hvkC = 0x436b7668,
     MODL = 0x4c444f4d,
     PGTB = 0x42544750,
     PIMG = 0x474d4950,
@@ -27,7 +30,6 @@ enum FourCC
     ROOT = 0x544f4f52,
     SKEL = 0x4c454b53,
     txtm = 0x6d747874,
-
 };
 
 }; // namespace fcc

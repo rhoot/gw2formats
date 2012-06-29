@@ -2,7 +2,6 @@
 
 #include <gw2formats/pf/chunks/ASND/WaveformData.h>
 
-
 namespace gw2f {
 namespace pf {
 namespace chunks {

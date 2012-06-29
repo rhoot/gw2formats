@@ -14,13 +14,16 @@
     <ClInclude Include="..\include\gw2formats\base.h" />
     <ClInclude Include="..\include\gw2formats\fcc.h" />
     <ClInclude Include="..\include\gw2formats\pf\AudioPackFile.h" />
+    <ClInclude Include="..\include\gw2formats\pf\BankIndexPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\BankPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\ChunkFactory.h" />
+    <ClInclude Include="..\include\gw2formats\pf\chunks\ABIX\BankIndexData.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\ABNK\BankFileData.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\AMAT\AmatDx9Material.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\AMAT\AmatGr.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\ASND\WaveformData.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\eula\PackEula.h" />
+    <ClInclude Include="..\include\gw2formats\pf\chunks\hvkC\PackMapCollide.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\common.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\ModelFileAnimation.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\ModelFileData.h" />
@@ -31,6 +34,7 @@
     <ClInclude Include="..\include\gw2formats\pf\chunks\PIMG\PagedImageTableData.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\txtm\TextPackManifest.h" />
     <ClInclude Include="..\include\gw2formats\pf\EulaPackFile.h" />
+    <ClInclude Include="..\include\gw2formats\pf\HavokPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\helpers\Array.h" />
     <ClInclude Include="..\include\gw2formats\pf\helpers\FileName.h" />
     <ClInclude Include="..\include\gw2formats\pf\helpers\FileReference.h" />
@@ -48,11 +52,13 @@
     <ClInclude Include="..\include\gw2formats\pf\TextManifestPackFile.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\pf\chunks\ABIX\BankIndexData.cpp" />
     <ClCompile Include="..\src\pf\chunks\ABNK\BankFileData.cpp" />
     <ClCompile Include="..\src\pf\chunks\AMAT\AmatDx9Material.cpp" />
     <ClCompile Include="..\src\pf\chunks\AMAT\AmatGr.cpp" />
     <ClCompile Include="..\src\pf\chunks\ASND\WaveformData.cpp" />
     <ClCompile Include="..\src\pf\chunks\eula\PackEula.cpp" />
+    <ClCompile Include="..\src\pf\chunks\hvkC\PackMapCollide.cpp" />
     <ClCompile Include="..\src\pf\chunks\MODL\common.cpp" />
     <ClCompile Include="..\src\pf\chunks\MODL\ModelFileAnimation.cpp" />
     <ClCompile Include="..\src\pf\chunks\MODL\ModelFileData.cpp" />
