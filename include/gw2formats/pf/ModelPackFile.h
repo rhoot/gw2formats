@@ -9,6 +9,7 @@
 #include <gw2formats/pf/PackFile.h>
 
 #include <gw2formats/pf/chunks/MODL/ModelFileData.h>
+#include <gw2formats/pf/chunks/MODL/ModelFileGeometry.h>
 
 namespace gw2f {
 namespace pf {

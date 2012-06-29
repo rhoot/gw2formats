@@ -11,12 +11,15 @@
 #include <gw2formats/base.h>
 #include <gw2formats/fcc.h>
 #include <gw2formats/pf/ChunkFactory.h>
+
 #include <gw2formats/pf/helpers/Array.h>
 #include <gw2formats/pf/helpers/FileName.h>
 #include <gw2formats/pf/helpers/Ptr.h>
 #include <gw2formats/pf/helpers/RefList.h>
 #include <gw2formats/pf/helpers/String.h>
 #include <gw2formats/pf/helpers/Vector.h>
+
+#include <gw2formats/pf/chunks/MODL/common.h>
 
 namespace gw2f {
 namespace pf {
@@ -346,18 +349,6 @@ public:
     ModelLightDataV65(const byte* p_data, uint32 p_size, const byte** po_pointer = nullptr);
     ModelLightDataV65(const ModelLightDataV65& p_other);
     ModelLightDataV65& operator=(const ModelLightDataV65& p_other);
-    const byte* assign(const byte* p_data, uint32 p_size);
-};
-
-GW2FORMATS_API struct PackVertexType
-{
-    dword fvf;
-    helpers::Array<byte> vertices;
-public:
-    PackVertexType();
-    PackVertexType(const byte* p_data, uint32 p_size, const byte** po_pointer = nullptr);
-    PackVertexType(const PackVertexType& p_other);
-    PackVertexType& operator=(const PackVertexType& p_other);
     const byte* assign(const byte* p_data, uint32 p_size);
 };
 

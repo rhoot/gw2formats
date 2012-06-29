@@ -117,6 +117,12 @@
     <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\ModelFileData.h">
       <Filter>Header Files\!external\pf\chunks\MODL</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\ModelFileGeometry.h">
+      <Filter>Header Files\!external\pf\chunks\MODL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\common.h">
+      <Filter>Header Files\!external\pf\chunks\MODL</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\pf\helpers\FileReference.cpp">
@@ -135,6 +141,12 @@
       <Filter>Source Files\pf\chunks\eula</Filter>
     </ClCompile>
     <ClCompile Include="..\src\pf\chunks\MODL\ModelFileData.cpp">
+      <Filter>Source Files\pf\chunks\MODL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\chunks\MODL\common.cpp">
+      <Filter>Source Files\pf\chunks\MODL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\chunks\MODL\ModelFileGeometry.cpp">
       <Filter>Source Files\pf\chunks\MODL</Filter>
     </ClCompile>
   </ItemGroup>
