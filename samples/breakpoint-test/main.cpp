@@ -4,6 +4,6 @@
 int main(int argc, char** argv)
 {
     gw2f::pf::ModelPackFile model(argv[1]);
-    auto chunk = model.chunk<gw2f::fcc::GEOM>();
+    auto chunk = model.chunk<gw2f::fcc::ANIM>();
     return 0;
 }

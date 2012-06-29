@@ -123,6 +123,9 @@
     <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\common.h">
       <Filter>Header Files\!external\pf\chunks\MODL</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\ModelFileAnimation.h">
+      <Filter>Header Files\!external\pf\chunks\MODL</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\pf\helpers\FileReference.cpp">
@@ -147,6 +150,9 @@
       <Filter>Source Files\pf\chunks\MODL</Filter>
     </ClCompile>
     <ClCompile Include="..\src\pf\chunks\MODL\ModelFileGeometry.cpp">
+      <Filter>Source Files\pf\chunks\MODL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\chunks\MODL\ModelFileAnimation.cpp">
       <Filter>Source Files\pf\chunks\MODL</Filter>
     </ClCompile>
   </ItemGroup>

@@ -8,6 +8,7 @@
 #include <gw2formats/fcc.h>
 #include <gw2formats/pf/PackFile.h>
 
+#include <gw2formats/pf/chunks/MODL/ModelFileAnimation.h>
 #include <gw2formats/pf/chunks/MODL/ModelFileData.h>
 #include <gw2formats/pf/chunks/MODL/ModelFileGeometry.h>
 
