@@ -517,7 +517,7 @@ MusicConditionDataV24::MusicConditionDataV24(const byte* p_data, uint32 p_size, 
 MusicConditionDataV24::MusicConditionDataV24(const MusicConditionDataV24& p_other)
     : name(p_other.name)
     , flags(p_other.flags)
-    , byteCodes(p_other.byteCodes)
+    , byteCode(p_other.byteCode)
 {
 }
 
@@ -525,7 +525,7 @@ MusicConditionDataV24& MusicConditionDataV24::operator=(const MusicConditionData
 {
     name     = p_other.name;
     flags    = p_other.flags;
-    byteCodes = p_other.byteCodes;
+    byteCode = p_other.byteCode;
     return *this;
 }
 
@@ -533,7 +533,7 @@ const byte* MusicConditionDataV24::assign(const byte* p_data, uint32 p_size)
 {
     p_data = helpers::read(p_data, p_size, name);
     p_data = helpers::read(p_data, p_size, flags);
-    p_data = helpers::read(p_data, p_size, byteCodes);
+    p_data = helpers::read(p_data, p_size, byteCode);
     return p_data;
 }
 
@@ -927,7 +927,7 @@ HandlerDataV24::HandlerDataV24(const byte* p_data, uint32 p_size, const byte** p
 HandlerDataV24::HandlerDataV24(const HandlerDataV24& p_other)
     : name(p_other.name)
     , flags(p_other.flags)
-    , byteCodes(p_other.byteCodes)
+    , byteCode(p_other.byteCode)
 {
 }
 
@@ -935,7 +935,7 @@ HandlerDataV24& HandlerDataV24::operator=(const HandlerDataV24& p_other)
 {
     name     = p_other.name;
     flags    = p_other.flags;
-    byteCodes = p_other.byteCodes;
+    byteCode = p_other.byteCode;
     return *this;
 }
 
@@ -943,7 +943,7 @@ const byte* HandlerDataV24::assign(const byte* p_data, uint32 p_size)
 {
     p_data = helpers::read(p_data, p_size, name);
     p_data = helpers::read(p_data, p_size, flags);
-    p_data = helpers::read(p_data, p_size, byteCodes);
+    p_data = helpers::read(p_data, p_size, byteCode);
     return p_data;
 }
 

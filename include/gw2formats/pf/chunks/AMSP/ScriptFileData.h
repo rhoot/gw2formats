@@ -185,7 +185,7 @@ GW2FORMATS_API struct MusicConditionDataV24
 {
     qword name;
     dword flags;
-    helpers::Array<byte> byteCodes;
+    helpers::Array<byte> byteCode;
 public:
     MusicConditionDataV24();
     MusicConditionDataV24(const byte* p_data, uint32 p_size, const byte** po_pointer = nullptr);
@@ -310,7 +310,7 @@ GW2FORMATS_API struct HandlerDataV24
 {
     qword name;
     dword flags;
-    helpers::Array<byte> byteCodes;
+    helpers::Array<byte> byteCode;
 public:
     HandlerDataV24();
     HandlerDataV24(const byte* p_data, uint32 p_size, const byte** po_pointer = nullptr);

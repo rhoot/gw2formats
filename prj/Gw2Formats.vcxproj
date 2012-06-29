@@ -13,6 +13,7 @@
   <ItemGroup>
     <ClInclude Include="..\include\gw2formats\base.h" />
     <ClInclude Include="..\include\gw2formats\fcc.h" />
+    <ClInclude Include="..\include\gw2formats\pf\AnimSequencesPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\AudioPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\BankIndexPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\BankPackFile.h" />
@@ -22,7 +23,9 @@
     <ClInclude Include="..\include\gw2formats\pf\chunks\AMAT\AmatDx9Material.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\AMAT\AmatGr.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\AMSP\ScriptFileData.h" />
+    <ClInclude Include="..\include\gw2formats\pf\chunks\anic\PackAnimSequences.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\ASND\WaveformData.h" />
+    <ClInclude Include="..\include\gw2formats\pf\chunks\CINP\SceneData.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\cmaC\CollideModelManifest.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\cmpc\PackComposite.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\cntc\PackContent.h" />
@@ -66,6 +69,7 @@
     <ClInclude Include="..\include\gw2formats\pf\PackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\PagedImagePackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\PortalManifestPackFile.h" />
+    <ClInclude Include="..\include\gw2formats\pf\ScenePackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\ScriptPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\TextManifestPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\TextVariantPackFile.h" />
@@ -77,7 +81,9 @@
     <ClCompile Include="..\src\pf\chunks\AMAT\AmatDx9Material.cpp" />
     <ClCompile Include="..\src\pf\chunks\AMAT\AmatGr.cpp" />
     <ClCompile Include="..\src\pf\chunks\AMSP\ScriptFileData.cpp" />
+    <ClCompile Include="..\src\pf\chunks\anic\PackAnimSequences.cpp" />
     <ClCompile Include="..\src\pf\chunks\ASND\WaveformData.cpp" />
+    <ClCompile Include="..\src\pf\chunks\CINP\SceneData.cpp" />
     <ClCompile Include="..\src\pf\chunks\cmaC\CollideModelManifest.cpp" />
     <ClCompile Include="..\src\pf\chunks\cmpc\PackComposite.cpp" />
     <ClCompile Include="..\src\pf\chunks\cntc\PackContent.cpp" />

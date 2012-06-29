@@ -148,6 +148,18 @@
     <Filter Include="Source Files\pf\chunks\cmpc">
       <UniqueIdentifier>{08b581d8-18a0-4919-92d9-567936e94122}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\!external\pf\chunks\anic">
+      <UniqueIdentifier>{47e205b3-1d34-4d61-a80d-297ccb9b96c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pf\chunks\anic">
+      <UniqueIdentifier>{b0cb5525-811d-407d-b82b-8f149cb82c6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\!external\pf\chunks\CINP">
+      <UniqueIdentifier>{267d475c-eefd-49c7-a4aa-b4edc8109db5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pf\chunks\CINP">
+      <UniqueIdentifier>{33c7c255-56cc-4b2b-b7f9-cdba7b31624e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\gw2formats\base.h">
@@ -327,6 +339,18 @@
     <ClInclude Include="..\include\gw2formats\pf\chunks\cmpc\PackComposite.h">
       <Filter>Header Files\!external\pf\chunks\cmpc</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\AnimSequencesPackFile.h">
+      <Filter>Header Files\!external\pf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\anic\PackAnimSequences.h">
+      <Filter>Header Files\!external\pf\chunks\anic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\ScenePackFile.h">
+      <Filter>Header Files\!external\pf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\CINP\SceneData.h">
+      <Filter>Header Files\!external\pf\chunks\CINP</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\pf\helpers\FileReference.cpp">
@@ -412,6 +436,12 @@
     </ClCompile>
     <ClCompile Include="..\src\pf\chunks\cmpc\PackComposite.cpp">
       <Filter>Source Files\pf\chunks\cmpc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\chunks\anic\PackAnimSequences.cpp">
+      <Filter>Source Files\pf\chunks\anic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\chunks\CINP\SceneData.cpp">
+      <Filter>Source Files\pf\chunks\CINP</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
