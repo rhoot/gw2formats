@@ -8,7 +8,7 @@
 #include <gw2formats/fcc.h>
 #include <gw2formats/pf/PackFile.h>
 
-#include <gw2formats/pf/chunks/ModelFileData.h>
+#include <gw2formats/pf/chunks/MODL/ModelFileData.h>
 
 namespace gw2f {
 namespace pf {

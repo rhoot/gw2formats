@@ -1,12 +1,12 @@
-// File: gw2formats/pf/chunks/AmatDx9Material.h
+// File: gw2formats/pf/chunks/AMAT/AmatDx9Material.h
 
 // Filetype: AMAT
 // Chunktype: DX9S
 
 #pragma once
 
-#ifndef GW2FORMATS_PF_CHUNKS_AMATDX9MATERIAL_H_INCLUDED
-#define GW2FORMATS_PF_CHUNKS_AMATDX9MATERIAL_H_INCLUDED
+#ifndef GW2FORMATS_PF_CHUNKS_AMAT_AMATDX9MATERIAL_H_INCLUDED
+#define GW2FORMATS_PF_CHUNKS_AMAT_AMATDX9MATERIAL_H_INCLUDED
 
 #include <gw2formats/base.h>
 #include <gw2formats/fcc.h>
@@ -111,4 +111,4 @@ template<> struct ChunkFactory<fcc::AMAT,fcc::DX9S> { typedef chunks::AmatDx9Mat
 }; // namespace pf
 }; // namespace gw2f
 
-#endif // GW2FORMATS_PF_CHUNKS_AMATDX9MATERIAL_H_INCLUDED
+#endif // GW2FORMATS_PF_CHUNKS_AMAT_AMATDX9MATERIAL_H_INCLUDED

@@ -14,9 +14,10 @@
     <ClInclude Include="..\include\gw2formats\base.h" />
     <ClInclude Include="..\include\gw2formats\fcc.h" />
     <ClInclude Include="..\include\gw2formats\pf\ChunkFactory.h" />
-    <ClInclude Include="..\include\gw2formats\pf\chunks\AmatGr.h" />
-    <ClInclude Include="..\include\gw2formats\pf\chunks\ModelFileData.h" />
-    <ClInclude Include="..\include\gw2formats\pf\chunks\PackEula.h" />
+    <ClInclude Include="..\include\gw2formats\pf\chunks\AMAT\AmatDx9Material.h" />
+    <ClInclude Include="..\include\gw2formats\pf\chunks\AMAT\AmatGr.h" />
+    <ClInclude Include="..\include\gw2formats\pf\chunks\eula\PackEula.h" />
+    <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\ModelFileData.h" />
     <ClInclude Include="..\include\gw2formats\pf\EulaPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\helpers\Array.h" />
     <ClInclude Include="..\include\gw2formats\pf\helpers\FileName.h" />
@@ -33,13 +34,12 @@
     <ClInclude Include="..\include\gw2formats\pf\PackFile.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\pf\chunks\ModelFileData.cpp" />
+    <ClCompile Include="..\src\pf\chunks\AMAT\AmatDx9Material.cpp" />
+    <ClCompile Include="..\src\pf\chunks\AMAT\AmatGr.cpp" />
+    <ClCompile Include="..\src\pf\chunks\eula\PackEula.cpp" />
+    <ClCompile Include="..\src\pf\chunks\MODL\ModelFileData.cpp" />
     <ClCompile Include="..\src\pf\helpers\FileName.cpp" />
     <ClCompile Include="..\src\pf\helpers\FileReference.cpp" />
-    <ClInclude Include="..\include\gw2formats\pf\chunks\AmatDx9Material.h" />
-    <ClCompile Include="..\src\pf\chunks\AmatDx9Material.cpp" />
-    <ClCompile Include="..\src\pf\chunks\AmatGr.cpp" />
-    <ClCompile Include="..\src\pf\chunks\PackEula.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C59C7548-51B5-496B-9B74-BE454AA4C8A2}</ProjectGuid>

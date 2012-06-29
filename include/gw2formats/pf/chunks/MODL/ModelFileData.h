@@ -1,12 +1,12 @@
-// File: gw2formats/pf/chunks/ModelFileData.h
+// File: gw2formats/pf/chunks/MODL/ModelFileData.h
 
 // Filetype: MODL
 // Chunktype: MODL
 
 #pragma once
 
-#ifndef GW2FORMATS_PF_CHUNKS_MODELFILEDATA_H_INCLUDED
-#define GW2FORMATS_PF_CHUNKS_MODELFILEDATA_H_INCLUDED
+#ifndef GW2FORMATS_PF_CHUNKS_MODL_MODELFILEDATA_H_INCLUDED
+#define GW2FORMATS_PF_CHUNKS_MODL_MODELFILEDATA_H_INCLUDED
 
 #include <gw2formats/base.h>
 #include <gw2formats/fcc.h>
@@ -645,4 +645,4 @@ template<> struct ChunkFactory<fcc::MODL,fcc::MODL> { typedef chunks::ModelFileD
 }; // namespace pf
 }; // namespace gw2f
 
-#endif // GW2FORMATS_PF_CHUNKS_MODELFILEDATA_H_INCLUDED
+#endif // GW2FORMATS_PF_CHUNKS_MODL_MODELFILEDATA_H_INCLUDED

@@ -1,6 +1,6 @@
-// File: pf/chunks/PackEula.cpp
+// File: pf/chunks/eula/PackEula.cpp
 
-#include <gw2formats/pf/chunks/PackEula.h>
+#include <gw2formats/pf/chunks/eula/PackEula.h>
 
 #include <gw2formats/pf/helpers/read.h>
 

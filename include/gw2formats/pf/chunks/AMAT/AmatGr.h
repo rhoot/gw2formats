@@ -1,12 +1,12 @@
-// File: gw2formats/pf/chunks/AmatGr.h
+// File: gw2formats/pf/chunks/AMAT/AmatGr.h
 
 // Filetype: AMAT
 // Chunktype: GRMT
 
 #pragma once
 
-#ifndef GW2FORMATS_PF_CHUNKS_AMATGR_H_INCLUDED
-#define GW2FORMATS_PF_CHUNKS_AMATGR_H_INCLUDED
+#ifndef GW2FORMATS_PF_CHUNKS_AMAT_AMATGR_H_INCLUDED
+#define GW2FORMATS_PF_CHUNKS_AMAT_AMATGR_H_INCLUDED
 
 #include <gw2formats/base.h>
 #include <gw2formats/fcc.h>
@@ -47,4 +47,4 @@ template<> struct ChunkFactory<fcc::AMAT,fcc::GRMT> { typedef chunks::AmatGr Typ
 }; // namespace pf
 }; // namespace gw2f
 
-#endif // GW2FORMATS_PF_CHUNKS_AMATGR_H_INCLUDED
+#endif // GW2FORMATS_PF_CHUNKS_AMAT_AMATGR_H_INCLUDED

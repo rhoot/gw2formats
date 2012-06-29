@@ -1,6 +1,6 @@
-// File: pf/chunks/ModelFileData.cpp
+// File: pf/chunks/MODL/ModelFileData.cpp
 
-#include <gw2formats/pf/chunks/ModelFileData.h>
+#include <gw2formats/pf/chunks/MODL/ModelFileData.h>
 
 namespace gw2f {
 namespace pf {

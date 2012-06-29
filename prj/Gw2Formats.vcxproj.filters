@@ -34,6 +34,24 @@
     <Filter Include="Source Files\pf\helpers">
       <UniqueIdentifier>{83bf54f7-7309-4cf4-8b03-1b07608c2bb3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\!external\pf\chunks\AMAT">
+      <UniqueIdentifier>{9fbbaec7-8c14-4f44-83db-1bb46408b41d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\!external\pf\chunks\eula">
+      <UniqueIdentifier>{7c6bb592-e961-4bd9-9a4e-8bda69b17848}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\!external\pf\chunks\MODL">
+      <UniqueIdentifier>{82c34941-444f-4a57-8794-3a6f8a8f09a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pf\chunks\AMAT">
+      <UniqueIdentifier>{49fa0a44-6852-49a1-95e7-850527d50f3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pf\chunks\eula">
+      <UniqueIdentifier>{cab50fb2-f65e-4495-b87a-4e8006e042db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pf\chunks\MODL">
+      <UniqueIdentifier>{99d541e0-8c58-4700-a1f9-9c1b83b5455c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\gw2formats\base.h">
@@ -78,20 +96,8 @@
     <ClInclude Include="..\include\gw2formats\pf\helpers\Vector.h">
       <Filter>Header Files\!external\pf\helpers</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\gw2formats\pf\chunks\AmatGr.h">
-      <Filter>Header Files\!external\pf\chunks</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\gw2formats\pf\EulaPackFile.h">
       <Filter>Header Files\!external\pf</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\gw2formats\pf\chunks\PackEula.h">
-      <Filter>Header Files\!external\pf\chunks</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\gw2formats\pf\chunks\AmatDx9Material.h">
-      <Filter>Header Files\!external\pf\chunks</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\gw2formats\pf\chunks\ModelFileData.h">
-      <Filter>Header Files\!external\pf\chunks</Filter>
     </ClInclude>
     <ClInclude Include="..\include\gw2formats\pf\helpers\FileName.h">
       <Filter>Header Files\!external\pf\helpers</Filter>
@@ -99,25 +105,37 @@
     <ClInclude Include="..\include\gw2formats\pf\helpers\FileReference.h">
       <Filter>Header Files\!external\pf\helpers</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\AMAT\AmatDx9Material.h">
+      <Filter>Header Files\!external\pf\chunks\AMAT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\AMAT\AmatGr.h">
+      <Filter>Header Files\!external\pf\chunks\AMAT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\eula\PackEula.h">
+      <Filter>Header Files\!external\pf\chunks\eula</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\ModelFileData.h">
+      <Filter>Header Files\!external\pf\chunks\MODL</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\pf\chunks\AmatGr.cpp">
-      <Filter>Source Files\pf\chunks</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\pf\chunks\AmatDx9Material.cpp">
-      <Filter>Source Files\pf\chunks</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\pf\chunks\PackEula.cpp">
-      <Filter>Source Files\pf\chunks</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\pf\helpers\FileReference.cpp">
       <Filter>Source Files\pf\helpers</Filter>
     </ClCompile>
     <ClCompile Include="..\src\pf\helpers\FileName.cpp">
       <Filter>Source Files\pf\helpers</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\pf\chunks\ModelFileData.cpp">
-      <Filter>Source Files\pf\chunks</Filter>
+    <ClCompile Include="..\src\pf\chunks\AMAT\AmatDx9Material.cpp">
+      <Filter>Source Files\pf\chunks\AMAT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\chunks\AMAT\AmatGr.cpp">
+      <Filter>Source Files\pf\chunks\AMAT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\chunks\eula\PackEula.cpp">
+      <Filter>Source Files\pf\chunks\eula</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\chunks\MODL\ModelFileData.cpp">
+      <Filter>Source Files\pf\chunks\MODL</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

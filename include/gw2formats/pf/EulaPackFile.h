@@ -8,7 +8,7 @@
 #include <gw2formats/fcc.h>
 #include <gw2formats/pf/PackFile.h>
 
-#include <gw2formats/pf/chunks/PackEula.h>
+#include <gw2formats/pf/chunks/eula/PackEula.h>
 
 namespace gw2f {
     namespace pf {

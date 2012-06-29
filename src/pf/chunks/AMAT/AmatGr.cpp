@@ -1,6 +1,6 @@
-// File: pf/chunks/AmatGrV5.cpp
+// File: pf/chunks/AMAT/AmatGrV5.cpp
 
-#include <gw2formats/pf/chunks/AmatGr.h>
+#include <gw2formats/pf/chunks/AMAT/AmatGr.h>
 
 #include <algorithm>
 

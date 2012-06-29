@@ -1,6 +1,6 @@
-// File: pf/chunks/AmatDx9Material.cpp
+// File: pf/chunks/AMAT/AmatDx9Material.cpp
 
-#include <gw2formats/pf/chunks/AmatDx9Material.h>
+#include <gw2formats/pf/chunks/AMAT/AmatDx9Material.h>
 
 namespace gw2f {
 namespace pf {

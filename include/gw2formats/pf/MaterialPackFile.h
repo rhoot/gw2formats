@@ -8,8 +8,8 @@
 #include <gw2formats/fcc.h>
 #include <gw2formats/pf/PackFile.h>
 
-#include <gw2formats/pf/chunks/AmatGr.h>
-#include <gw2formats/pf/chunks/AmatDx9Material.h>
+#include <gw2formats/pf/chunks/AMAT/AmatGr.h>
+#include <gw2formats/pf/chunks/AMAT/AmatDx9Material.h>
 
 namespace gw2f {
 namespace pf {
