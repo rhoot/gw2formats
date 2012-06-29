@@ -11,8 +11,11 @@ namespace fcc {
 enum FourCC
 {
 
+    ABNK = 0x4b4e4241,
     ANIM = 0x4d494e41,
     AMAT = 0x54414d41,
+    ASND = 0x444e5341,
+    BKCK = 0x4b434b42,
     DX9S = 0x53395844,
     eula = 0x616c7565,
     GEOM = 0x4d4f4547,

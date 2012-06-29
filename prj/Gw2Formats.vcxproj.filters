@@ -64,6 +64,18 @@
     <Filter Include="Source Files\pf\chunks\PIMG">
       <UniqueIdentifier>{40c36e3b-d73b-43e1-9645-a675a0728c61}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\!external\pf\chunks\ASND">
+      <UniqueIdentifier>{c83b0079-1a07-4253-bc37-b3296d6fb8ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pf\chunks\ASND">
+      <UniqueIdentifier>{07662be2-ae71-4507-9728-74c89977c47d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\!external\pf\chunks\ABNK">
+      <UniqueIdentifier>{0f062fc8-cbee-4231-bf6d-1ceb5c19d92a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pf\chunks\ABNK">
+      <UniqueIdentifier>{9d809697-a8f2-4a5e-8987-edb3b30962c1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\gw2formats\base.h">
@@ -159,6 +171,18 @@
     <ClInclude Include="..\include\gw2formats\pf\chunks\PIMG\PagedImageTableData.h">
       <Filter>Header Files\!external\pf\chunks\PIMG</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\AudioPackFile.h">
+      <Filter>Header Files\!external\pf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\ASND\WaveformData.h">
+      <Filter>Header Files\!external\pf\chunks\ASND</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\BankPackFile.h">
+      <Filter>Header Files\!external\pf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\pf\chunks\ABNK\BankFileData.h">
+      <Filter>Header Files\!external\pf\chunks\ABNK</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\pf\helpers\FileReference.cpp">
@@ -202,6 +226,12 @@
     </ClCompile>
     <ClCompile Include="..\src\pf\chunks\PIMG\PagedImageTableData.cpp">
       <Filter>Source Files\pf\chunks\PIMG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\chunks\ASND\WaveformData.cpp">
+      <Filter>Source Files\pf\chunks\ASND</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pf\chunks\ABNK\BankFileData.cpp">
+      <Filter>Source Files\pf\chunks\ABNK</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

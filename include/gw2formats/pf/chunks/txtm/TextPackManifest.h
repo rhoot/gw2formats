@@ -1,5 +1,8 @@
 // File: gw2formats/pf/chunks/txtm/TextPackManifest.h
 
+// Filetype: txtm
+// Chunktype: txtm
+
 #pragma once
 
 #ifndef GW2FORMATS_PF_CHUNKS_TXTM_TEXTPACKMANIFEST_H_INCLUDED

@@ -13,9 +13,13 @@
   <ItemGroup>
     <ClInclude Include="..\include\gw2formats\base.h" />
     <ClInclude Include="..\include\gw2formats\fcc.h" />
+    <ClInclude Include="..\include\gw2formats\pf\AudioPackFile.h" />
+    <ClInclude Include="..\include\gw2formats\pf\BankPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\ChunkFactory.h" />
+    <ClInclude Include="..\include\gw2formats\pf\chunks\ABNK\BankFileData.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\AMAT\AmatDx9Material.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\AMAT\AmatGr.h" />
+    <ClInclude Include="..\include\gw2formats\pf\chunks\ASND\WaveformData.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\eula\PackEula.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\common.h" />
     <ClInclude Include="..\include\gw2formats\pf\chunks\MODL\ModelFileAnimation.h" />
@@ -44,8 +48,10 @@
     <ClInclude Include="..\include\gw2formats\pf\TextManifestPackFile.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\pf\chunks\ABNK\BankFileData.cpp" />
     <ClCompile Include="..\src\pf\chunks\AMAT\AmatDx9Material.cpp" />
     <ClCompile Include="..\src\pf\chunks\AMAT\AmatGr.cpp" />
+    <ClCompile Include="..\src\pf\chunks\ASND\WaveformData.cpp" />
     <ClCompile Include="..\src\pf\chunks\eula\PackEula.cpp" />
     <ClCompile Include="..\src\pf\chunks\MODL\common.cpp" />
     <ClCompile Include="..\src\pf\chunks\MODL\ModelFileAnimation.cpp" />

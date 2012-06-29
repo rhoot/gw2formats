@@ -1,5 +1,8 @@
 // File: gw2formats/pf/chunks/PIMG/PagedImageTableData.h
 
+// Filetype: PIMG
+// Chunktype: PGTB
+
 #pragma once
 
 #ifndef GW2FORMATS_PF_CHUNKS_PIMG_PAGEDIMAGETABLEDATA_H_INCLUDED
