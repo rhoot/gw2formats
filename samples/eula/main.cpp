@@ -11,7 +11,7 @@ int main(int argc, char** argv) {
     gw2f::pf::EulaPackFile eula(argv[1]);
 
     try {
-        auto chunk = eula.chunk<gw2f::fcc::eula>();
+        auto chunk = eula.chunk<gw2f::pf::EulaChunks::eula>();
 
         if (chunk->languages.size() > 0) {
             gw2f::uint32 language = 0;

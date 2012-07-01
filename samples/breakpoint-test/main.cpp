@@ -1,9 +1,17 @@
 
 #include <gw2formats/bxml2/Bxml2Reader.h>
 #include <gw2formats/bxml2/XmlDocument.h>
-#include <gw2formats/bxml2/XmlElement.h>
 
 #include <iostream>
+
+void outputElement(const gw2f::bxml2::XmlElement& p_element, gw2f::uint32 depth = 0)
+{
+    std::cout << std::string(2 * depth, ' ') << p_element.name() << std::endl;
+
+    for (auto element = p_element.firstChild(); element; element = element->nextSibling()) {
+        outputElement(*element, depth + 1);
+    }
+}
 
 int main(int argc, char** argv)
 {
@@ -17,10 +25,7 @@ int main(int argc, char** argv)
     gw2f::bxml2::Bxml2Reader reader(argv[1]);
     gw2f::bxml2::XmlDocument doc;
     reader.populateXmlDocument(doc);
-
-    for (auto element = doc.root().firstChild(); element; element = element->nextSibling()) {
-        std::cout << element->name() << std::endl;
-    }
+    outputElement(doc.root());
 
     return 0;
 }
