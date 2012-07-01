@@ -16,6 +16,13 @@ namespace pf {
 typedef PackFile<fcc::txtv> TxtvPackFile;
 typedef PackFile<fcc::txtv> TextVoicePackFile;
 
+namespace TextVoiceChunks { enum 
+{
+    txtv       = fcc::txtv,
+    TextVoices = fcc::txtv,
+}; // anon enum
+}; // namespace TextVoiceChunks
+
 }; // namespace pf
 }; // namespace gw2formats
 

@@ -16,6 +16,12 @@ namespace pf {
 typedef PackFile<fcc::AMSP> AmspPackFile;
 typedef PackFile<fcc::AMSP> ScriptPackFile;
 
+namespace ScriptChunks { enum {
+    AMSP   = fcc::AMSP,
+    Script = fcc::AMSP,
+}; // anon enum
+}; // namespace ScriptChunks
+
 }; // namespace pf
 }; // namespace gw2formats
 

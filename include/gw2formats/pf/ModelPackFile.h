@@ -21,6 +21,23 @@ namespace pf {
 typedef PackFile<fcc::MODL> ModlPackFile;
 typedef PackFile<fcc::MODL> ModelPackFile;
 
+namespace ModelChunks { enum
+{
+    ANIM       = fcc::ANIM,
+    Animation  = fcc::ANIM,
+    MODL       = fcc::MODL,
+    Model      = fcc::MODL,
+    GEOM       = fcc::GEOM,
+    Geometry   = fcc::GEOM,
+    PRPS       = fcc::PRPS,
+    Properties = fcc::PRPS,
+    ROOT       = fcc::ROOT,
+    RootMotion = fcc::ROOT,
+    SKEL       = fcc::SKEL,
+    Skeleton   = fcc::SKEL,
+}; // anon enum
+}; // namespace ModelChunks
+
 }; // namespace pf
 }; // namespace gw2formats
 

@@ -16,6 +16,13 @@ namespace pf {
 typedef PackFile<fcc::ABIX> AbixPackFile;
 typedef PackFile<fcc::ABIX> BankIndexPackFile;
 
+namespace BankIndexChunks { enum 
+{
+    BIDX      = fcc::BIDX,
+    BankIndex = fcc::BIDX,
+}; // anon enum
+}; // namespace BankIndexChunks
+
 }; // namespace pf
 }; // namespace gw2formats
 

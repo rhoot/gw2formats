@@ -16,6 +16,13 @@ namespace pf {
 typedef PackFile<fcc::PIMG> PimgPackFile;
 typedef PackFile<fcc::PIMG> PagedImagePackFile;
 
+namespace PagedImageChunks { enum
+{
+    PGTB            = fcc::PGTB,
+    PagedImageTable = fcc::PGTB,
+}; // anon enum
+}; // namespace PagedImageChunks
+
 }; // namespace pf
 }; // namespace gw2formats
 

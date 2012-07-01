@@ -16,6 +16,13 @@ namespace pf {
 typedef PackFile<fcc::cntc> CntcPackFile;
 typedef PackFile<fcc::cntc> ContentManifestPackFile;
 
+namespace ContentManifestChunks { enum
+{
+    Main    = fcc::Main,
+    Content = fcc::Main,
+}; // anon enum
+}; // namespace ContentManifestChunks
+
 }; // namespace pf
 }; // namespace gw2formats
 

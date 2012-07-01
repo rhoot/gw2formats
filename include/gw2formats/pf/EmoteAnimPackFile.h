@@ -16,6 +16,13 @@ namespace pf {
 typedef PackFile<fcc::emoc> EmocPackFile;
 typedef PackFile<fcc::emoc> EmoteAnimPackFile;
 
+namespace EmoteAnimChunks { enum
+{
+    anim       = fcc::anim,
+    EmoteAnims = fcc::anim,
+}; // anon enum
+}; // namespace EmoteAnimChunks
+
 }; // namespace pf
 }; // namespace gw2formats
 

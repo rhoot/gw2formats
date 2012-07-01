@@ -17,6 +17,15 @@ namespace pf {
 typedef PackFile<fcc::AMAT> AmatPackFile;
 typedef PackFile<fcc::AMAT> MaterialPackFile;
 
+namespace MaterialChunks { enum 
+{
+    GRMT           = fcc::GRMT,
+    GrannyMaterial = fcc::GRMT,
+    DX9S           = fcc::DX9S,
+    Dx9Shader      = fcc::DX9S,
+}; // anon enum
+}; // namespace MaterialChunks
+
 }; // namespace pf
 }; // namespace gw2formats
 

@@ -16,6 +16,12 @@ namespace pf {
 typedef PackFile<fcc::anic> AnicPackFile;
 typedef PackFile<fcc::anic> AnimSequencesPackFile;
 
+namespace { enum {
+    seqn          = fcc::seqn,
+    AnimSequences = fcc::seqn,
+}; // anon enum
+}; // namespace AnimSequencesChunks
+
 }; // namespace pf
 }; // namespace gw2formats
 

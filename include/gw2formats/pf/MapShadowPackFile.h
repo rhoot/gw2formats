@@ -16,6 +16,13 @@ namespace pf {
 typedef PackFile<fcc::mpsd> MpsdPackFile;
 typedef PackFile<fcc::mpsd> MapShadowPackFile;
 
+namespace MapShadowChunks { enum 
+{
+    shad      = fcc::shad,
+    MapShadow = fcc::shad,
+}; // anon enum
+}; // namespace MapShadowChunks
+
 }; // namespace pf
 }; // namespace gw2formats
 

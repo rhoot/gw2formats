@@ -15,6 +15,13 @@ namespace pf {
 
 typedef PackFile<fcc::eula> EulaPackFile;
 
+namespace EulaChunks { enum
+{
+    eula = fcc::eula,
+    Eula = fcc::eula,
+}; // anon enum
+}; // namespace EulaChunks
+
 }; // namespace pf
 }; // namespace gw2formats
 

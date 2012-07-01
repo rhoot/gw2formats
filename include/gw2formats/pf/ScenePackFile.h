@@ -16,6 +16,12 @@ namespace pf {
 typedef PackFile<fcc::CINP> CinpPackFile;
 typedef PackFile<fcc::CINP> ScenePackFile;
 
+namespace SceneChunks { enum {
+    CSCN  = fcc::CSCN,
+    Scene = fcc::CSCN,
+}; // anon enum
+}; // namespace SceneChunks
+
 }; // namespace pf
 }; // namespace gw2formats
 

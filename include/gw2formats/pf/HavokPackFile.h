@@ -16,6 +16,13 @@ namespace pf {
 typedef PackFile<fcc::hvkC> HvkcPackFile;
 typedef PackFile<fcc::hvkC> HavokPackFile;
 
+namespace HavokChunks { enum 
+{
+    havk    = fcc::havk,
+    Collide = fcc::havk,
+}; // anon enum
+}; // namespace HavokChunks
+
 }; // namespace pf
 }; // namespace gw2formats
 

@@ -16,6 +16,13 @@ namespace pf {
 typedef PackFile<fcc::cmaC> CmacPackFile;
 typedef PackFile<fcc::cmaC> CollideModelManifestPackFile;
 
+namespace CollideModelManifestChunks { enum 
+{
+    main                 = fcc::main,
+    CollideModelManifest = fcc::main,
+}; // anon enum
+}; // namespace CollideModelManifestChunks
+
 }; // namespace pf
 }; // namespace gw2formats
 

@@ -16,6 +16,13 @@ namespace pf {
 typedef PackFile<fcc::cmpc> CmpcPackFile;
 typedef PackFile<fcc::cmpc> CompositePackFile;
 
+namespace CompositeChunks { enum
+{
+    comp      = fcc::comp,
+    Composite = fcc::comp,
+}; // anon enum
+}; // namespace CompositeChunks
+
 }; // namespace pf
 }; // namespace gw2formats
 

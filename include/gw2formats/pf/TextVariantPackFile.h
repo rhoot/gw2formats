@@ -16,6 +16,13 @@ namespace pf {
 typedef PackFile<fcc::txtV> TxtVPackFile;
 typedef PackFile<fcc::txtV> TextVariantPackFile;
 
+namespace TextVariantChunks { enum
+{
+    vari         = fcc::vari,
+    TextVariants = fcc::vari,
+}; // anon enum
+}; // namespace TextVariantChunks
+
 }; // namespace pf
 }; // namespace gw2formats
 

@@ -16,6 +16,13 @@ namespace pf {
 typedef PackFile<fcc::ABNK> AbnkPackFile;
 typedef PackFile<fcc::ABNK> BankPackFile;
 
+namespace BankChunks { enum 
+{
+    BKCK     = fcc::BKCK,
+    BankFile = fcc::BKCK,
+}; // anon enum
+}; // namespace BankChunks
+
 }; // namespace pf
 }; // namespace gw2formats
 

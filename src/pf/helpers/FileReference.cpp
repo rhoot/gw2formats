@@ -59,7 +59,11 @@ uint16 FileReference::highPart() const
 
 uint32 FileReference::fileId() const
 {
-    return (m_highPart - 0x100) * 0xff00 + (m_lowPart - 0xff);
+    if (m_highPart >= 0x100 && m_lowPart >= 0x100) {
+        return (m_highPart - 0x100) * 0xff00 + (m_lowPart - 0xff);
+    } else {
+        return 0;
+    }
 }
 
 }; // namespace helpers

@@ -16,6 +16,13 @@ namespace pf {
 typedef PackFile<fcc::txtm> TxtmPackFile;
 typedef PackFile<fcc::txtm> TextManifestPackFile;
 
+namespace TextManifestChunks { enum 
+{
+    txtm         = fcc::txtm,
+    TextManifest = fcc::txtm,
+}; // anon enum
+}; // namespace TextManifestChunks
+
 }; // namespace pf
 }; // namespace gw2formats
 

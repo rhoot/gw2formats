@@ -16,6 +16,13 @@ namespace pf {
 typedef PackFile<fcc::ASND> AsndPackFile;
 typedef PackFile<fcc::ASND> AudioPackFile;
 
+namespace AudioChunks{ enum
+{
+    ASND     = fcc::ASND,
+    Waveform = fcc::ASND,
+}; // anon enum
+}; // namespace AudioChunks
+
 }; // namespace pf
 }; // namespace gw2formats
 

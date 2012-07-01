@@ -16,6 +16,13 @@ namespace pf {
 typedef PackFile<fcc::mMet> MmetPackFile;
 typedef PackFile<fcc::mMet> MapMetadataPackFile;
 
+namespace MapMetadataChunks { enum
+{
+    Main        = fcc::Main,
+    MapMetadata = fcc::Main,
+}; // anon enum
+}; // namespace MapMetadataChunks
+
 }; // namespace pf
 }; // namespace gw2formats
 

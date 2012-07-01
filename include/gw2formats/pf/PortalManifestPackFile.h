@@ -16,6 +16,13 @@ namespace pf {
 typedef PackFile<fcc::prlt> PrltPackFile;
 typedef PackFile<fcc::prlt> PortalManifestPackFile;
 
+namespace PortalManifestChunks { enum
+{
+    mfst     = fcc::mfst,
+    Manifest = fcc::mfst,
+}; // anon enum
+}; // namespace PortalManifestChunks
+
 }; // namespace pf
 }; // namespace gw2formats
 
