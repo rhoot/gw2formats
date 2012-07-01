@@ -169,6 +169,12 @@
     <Filter Include="Source Files\pf\chunks\mapc">
       <UniqueIdentifier>{1fd3d960-4090-44fc-b466-7427aa6e8470}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\external\bxml2">
+      <UniqueIdentifier>{baafe3b8-fbb7-4a29-be9a-752037a2ab95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\bxml2">
+      <UniqueIdentifier>{8b5119f7-db15-40a6-9781-282feaf3336d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\gw2formats\base.h">
@@ -417,6 +423,18 @@
     <ClInclude Include="..\include\gw2formats\pf\chunks\mapc\PackMapLights.h">
       <Filter>Header Files\external\pf\chunks\mapc</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\gw2formats\bxml2\XmlDocument.h">
+      <Filter>Header Files\external\bxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\bxml2\XmlElement.h">
+      <Filter>Header Files\external\bxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\bxml2\XmlAttribute.h">
+      <Filter>Header Files\external\bxml2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\gw2formats\bxml2\Bxml2Reader.h">
+      <Filter>Header Files\external\bxml2</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\pf\helpers\FileReference.cpp">
@@ -559,6 +577,18 @@
     </ClCompile>
     <ClCompile Include="..\src\pf\chunks\mapc\PackMapLights.cpp">
       <Filter>Source Files\pf\chunks\mapc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bxml2\XmlDocument.cpp">
+      <Filter>Source Files\bxml2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bxml2\XmlElement.cpp">
+      <Filter>Source Files\bxml2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bxml2\XmlAttribute.cpp">
+      <Filter>Source Files\bxml2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bxml2\Bxml2Reader.cpp">
+      <Filter>Source Files\bxml2</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

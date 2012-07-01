@@ -12,6 +12,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\gw2formats\base.h" />
+    <ClInclude Include="..\include\gw2formats\bxml2\Bxml2Reader.h" />
+    <ClInclude Include="..\include\gw2formats\bxml2\XmlAttribute.h" />
+    <ClInclude Include="..\include\gw2formats\bxml2\XmlDocument.h" />
+    <ClInclude Include="..\include\gw2formats\bxml2\XmlElement.h" />
     <ClInclude Include="..\include\gw2formats\fcc.h" />
     <ClInclude Include="..\include\gw2formats\pf\AnimSequencesPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\AudioPackFile.h" />
@@ -95,6 +99,10 @@
     <ClInclude Include="..\include\gw2formats\pf\TextVoicePackFile.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\bxml2\Bxml2Reader.cpp" />
+    <ClCompile Include="..\src\bxml2\XmlAttribute.cpp" />
+    <ClCompile Include="..\src\bxml2\XmlDocument.cpp" />
+    <ClCompile Include="..\src\bxml2\XmlElement.cpp" />
     <ClCompile Include="..\src\pf\chunks\ABIX\BankIndexData.cpp" />
     <ClCompile Include="..\src\pf\chunks\ABNK\BankFileData.cpp" />
     <ClCompile Include="..\src\pf\chunks\AMAT\AmatDx9Material.cpp" />
@@ -187,7 +195,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(ProjectDir)..\include;$(ProjectDir)..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+      <ObjectFileName>$(IntDir)%(RelativeDir)/</ObjectFileName>
       <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
@@ -205,7 +213,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>$(ProjectDir)..\include;$(ProjectDir)..\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <ObjectFileName>$(IntDir)/%(RelativeDir)/</ObjectFileName>
+      <ObjectFileName>$(IntDir)%(RelativeDir)/</ObjectFileName>
       <ProgramDataBaseFileName>$(TargetDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
