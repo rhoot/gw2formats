@@ -11,12 +11,10 @@
 #include <vector>
 
 #include <gw2formats/base.h>
+#include <gw2formats/bxml2/XmlDocument.h>
 
 namespace gw2f {
 namespace bxml2 {
-
-class XmlDocument;
-class XmlElement;
 
 class Bxml2Reader
 {

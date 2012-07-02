@@ -435,6 +435,9 @@
     <ClInclude Include="..\include\gw2formats\bxml2\Bxml2Reader.h">
       <Filter>Header Files\external\bxml2</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\gw2formats\bxml2\XmlWriter.h">
+      <Filter>Header Files\external\bxml2</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\pf\helpers\FileReference.cpp">
@@ -588,6 +591,9 @@
       <Filter>Source Files\bxml2</Filter>
     </ClCompile>
     <ClCompile Include="..\src\bxml2\Bxml2Reader.cpp">
+      <Filter>Source Files\bxml2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bxml2\XmlWriter.cpp">
       <Filter>Source Files\bxml2</Filter>
     </ClCompile>
   </ItemGroup>

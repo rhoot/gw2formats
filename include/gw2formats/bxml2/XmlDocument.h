@@ -18,6 +18,8 @@ namespace bxml2 {
 class XmlDocument
 {
     std::unique_ptr<XmlElement> m_root;
+    std::string m_encoding;
+    std::string m_version;
 public:
     XmlDocument();
     XmlDocument(const std::string& p_rootName);
@@ -28,6 +30,11 @@ public:
 
     XmlElement& root();
     const XmlElement& root() const;
+
+    const std::string& encoding() const;
+    const std::string& version() const;
+    void setEncoding(const std::string& p_encoding);
+    void setVersion(const std::string& p_version);
 };
 
 }; // namespace bxml2
