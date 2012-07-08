@@ -9,7 +9,6 @@
 
 // DLL
 #ifdef GW2FORMATS_DLL
-
 #  ifdef _MSC_VER
 #    ifdef GW2FORMATS_EXPORT
 #      define GW2FORMATS_API __declspec(dllexport)
@@ -20,13 +19,10 @@
 #  else
 #    error For gw2formats to be able to compile as a DLL with this compiler, support must be added to include/gw2formats/base.h.
 #  endif
-
 // STATIC LIB
 #else
-
 #  define GW2FORMATS_API
 #  define GW2FORMATS_APIENTRY
-
 #endif
 
 namespace gw2f {
@@ -47,6 +43,29 @@ typedef uint64_t        uint64;
 
 typedef float           float32;
 typedef double          float64;
+
+// Unicode chars (NOTE: UNTESTED FOR ANYTHING BUT MSVC)
+#ifdef _MSC_VER
+   typedef wchar_t      char16;
+   typedef uint32       char32;
+#elif defined(__has_feature) && __has_feature(cxx_unicode_literals)
+   typedef char16_t     char16;
+   typedef char32_t     char32;
+#elif defined(__GNUC__) && (__GNUC__ > 4 || (__GNUC__ == 4 && __GNUC_MINOR__ >= 5))
+   typedef char16_t     char16;
+   typedef char32_t     char32;
+#else
+#  if defined(WCHAR_MAX) && (WCHAR_MAX == 0xffff)
+     typedef wchar_t    char16;
+#  else
+     typedef uint16     char16;
+#  endif
+#  if defined(WCHAR_MAX) && (WCHAR_MAX == 0xffffffff)
+     typedef wchar_t    char32;
+#  else
+     typedef uint32     char32;
+#  endif
+#endif 
 
 }; // namespace gw2f
 

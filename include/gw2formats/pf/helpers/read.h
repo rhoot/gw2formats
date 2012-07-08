@@ -120,8 +120,8 @@ template<> inline const byte* read<int8>(const byte* p_data, uint32& po_size, in
     return readNumber(p_data, po_size, po_output);
 }
 
-// wchar_t
-template<> inline const byte* read<wchar_t>(const byte* p_data, uint32& po_size, wchar_t& po_output)
+// char16
+template<> inline const byte* read<char16>(const byte* p_data, uint32& po_size, char16& po_output)
 {
     return readNumber(p_data, po_size, po_output);
 }
