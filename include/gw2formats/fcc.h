@@ -61,6 +61,7 @@ enum FourCC
     shex = 0x78656873,
     shor = 0x726f6873,
     SKEL = 0x4c454b53,
+    strs = 0x73727473,
     surf = 0x66727573,
     trn  = 0x006e7274,
     trni = 0x696e7274,

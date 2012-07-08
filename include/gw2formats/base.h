@@ -48,20 +48,27 @@ typedef double          float64;
 #ifdef _MSC_VER
    typedef wchar_t      char16;
    typedef uint32       char32;
+#  define GW2F_U16(x)   L##x
 #elif defined(__has_feature) && __has_feature(cxx_unicode_literals)
    typedef char16_t     char16;
    typedef char32_t     char32;
+#  define GW2F_U16(x)   u##x
+#  define GW2F_U32(x)   U##x
 #elif defined(__GNUC__) && (__GNUC__ > 4 || (__GNUC__ == 4 && __GNUC_MINOR__ >= 5))
    typedef char16_t     char16;
    typedef char32_t     char32;
+#  define GW2F_U16(x)   u##x
+#  define GW2F_U32(x)   U##x
 #else
 #  if defined(WCHAR_MAX) && (WCHAR_MAX == 0xffff)
      typedef wchar_t    char16;
+#    define GW2F_U16(x) L##x
 #  else
      typedef uint16     char16;
 #  endif
 #  if defined(WCHAR_MAX) && (WCHAR_MAX == 0xffffffff)
      typedef wchar_t    char32;
+#    define GW2F_U32(x) L##x
 #  else
      typedef uint32     char32;
 #  endif

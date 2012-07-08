@@ -5,6 +5,7 @@
 #ifndef GW2FORMATS_PF_PACKFILE_H_INCLUDED
 #define GW2FORMATS_PF_PACKFILE_H_INCLUDED
 
+#include <algorithm>
 #include <fstream>
 #include <memory>
 #include <vector>
@@ -71,7 +72,9 @@ public:
         load(p_filename);
     }
 
-    /** Creates the PackFile and assigns it the data contained in p_data.
+    /** Creates the PackFile and assigns it the data contained in p_data. The
+     *  data is copied internally, so it is still expected to be freed by the
+     *  caller.
      *  \param[in]  p_data  Data containing PackFile data.
      *  \param[in]  p_size  Size of p_data. */
     PackFile(const byte* p_data, uint32 p_size)
@@ -86,7 +89,7 @@ public:
         : m_data(p_other.m_data)
         , m_header(nullptr)
     {
-        if (m_data->size()) {
+        if (m_data->size() >= sizeof(FileHeader)) {
             m_header = reinterpret_cast<const FileHeader*>(m_data->data());
         }
     }
@@ -101,7 +104,7 @@ public:
     {
         m_data = p_other.m_data;
 
-        if (m_data->size()) {
+        if (m_data->size() >= sizeof(FileHeader)) {
             m_header = reinterpret_cast<const FileHeader*>(m_data->data());
         } else {
             m_header = nullptr;
@@ -118,18 +121,30 @@ public:
         std::ifstream input(p_filename, std::ios::in | std::ios::binary);
         if (!input.is_open()) { return false; }
 
+        // determine size
         input.seekg(0, std::ios::end);
         uint32 size = static_cast<uint32>(input.tellg());
+        if (size < sizeof(FileHeader)) { return false; }
         input.seekg(0, std::ios::beg);
 
-        std::vector<byte> data(size);
-        input.read(reinterpret_cast<char*>(data.data()), data.size());
+        // read data
+        m_data.reset(new DataVector(size));
+        input.read(reinterpret_cast<char*>(m_data->data()), m_data->size());
         input.close();
 
-        return assign(data.data(), data.size());
+        // ensure it's a pack file
+        m_header = reinterpret_cast<const FileHeader*>(m_data->data());
+        if (m_header->magic[0] != 'P' || m_header->magic[1] != 'F') {
+            m_data->resize(0);
+            m_header = nullptr;
+            return false;
+        }
+
+        return true;
     }
 
-    /** Assigns this PackFile the contents of the given data.
+    /** Assigns this PackFile the contents of the given data. The data is 
+     *  copied internally, so it is still expected to be freed by the caller.
      *  \param[in]  p_data      Data to assign.
      *  \param[in]  p_size      Size of p_data.
      *  \return     bool        True if successful, false if not. */
@@ -144,7 +159,7 @@ public:
         if (header->contentType != TFileType) { return false; }
 
         m_data.reset(new DataVector(p_size));
-        std::memcpy(m_data->data(), p_data, p_size);
+        std::copy_n(p_data, p_size, m_data->data());
         m_header = reinterpret_cast<const FileHeader*>(m_data->data());
         return true;
     }
@@ -190,7 +205,8 @@ public:
     }
 
     /** Looks for a chunk with the given identifier and returns a structure
-     *  containing its data.
+     *  containing its data. If - when compiling this - you encounter a weird
+     *  sizeof related error, it means you supplied an unsupported chunk type.
      *  \tparam     TId                 Chunk identifier.
      *  \return     shared_ptr<struct>  Shared pointer containing a chunk-
      *                                  specific struct, with the found chunk's
@@ -201,17 +217,14 @@ public:
     {
         uint32 size;
         const byte* data = chunk(TId, size);
-        return std::make_shared<typename ChunkFactory<TFileType,TId>::Type>(data, size);
+
+        if (data) {
+            return std::make_shared<typename ChunkFactory<TFileType,TId>::Type>(data, size);
+        } else {
+            return nullptr;
+        }
     }
 };
-
-// FourCC names, in alphabetic order
-typedef PackFile<fcc::AMAT> AmatPackFile;
-typedef PackFile<fcc::MODL> ModlPackFile;
-
-// Descriptive names, in alphabetic order
-typedef PackFile<fcc::AMAT> MaterialPackFile;
-typedef PackFile<fcc::MODL> ModelPackFile;
 
 }; // namespace pf
 }; // namespace gw2f

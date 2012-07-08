@@ -19,7 +19,7 @@ bool outputElement(const XmlElement& p_element, std::ostream& p_stream, uint32_t
     p_stream << indent << "<" << p_element.name();
 
     // attributes
-    for (uint32_t i = 0; i < p_element.numAttributes(); i++) {
+    for (uint32_t i = 0; i < p_element.attributeCount(); i++) {
         p_stream 
             << " " 
             << p_element.attributes()[i]->name() 
@@ -29,7 +29,7 @@ bool outputElement(const XmlElement& p_element, std::ostream& p_stream, uint32_t
     }
 
     // close the starting tag
-    if (!p_element.numChildren()) { p_stream << "/"; }
+    if (!p_element.childCount()) { p_stream << "/"; }
     p_stream << ">" << std::endl;
 
     // output children
@@ -40,7 +40,7 @@ bool outputElement(const XmlElement& p_element, std::ostream& p_stream, uint32_t
     }
 
     // output end tag
-    if (p_element.numChildren()) {
+    if (p_element.childCount()) {
         p_stream << indent << "</" << p_element.name() << ">" << std::endl;
     }
 

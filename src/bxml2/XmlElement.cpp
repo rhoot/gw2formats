@@ -52,7 +52,7 @@ XmlElement& XmlElement::operator=(const XmlElement& p_other)
         appendChild(child);
     }
 
-    auto numAttribs = p_other.numAttributes();
+    auto numAttribs = p_other.attributeCount();
     auto attribs    = p_other.attributes();
     for (uint32 i = 0; i < numAttribs; i++) {
         addAttribute(new XmlAttribute(*attribs[i]));
@@ -145,12 +145,12 @@ void XmlElement::clear()
     m_value.clear();
 }
 
-uint32 XmlElement::numAttributes() const
+uint32 XmlElement::attributeCount() const
 {
     return m_attributes.size();
 }
 
-uint32 XmlElement::numChildren() const
+uint32 XmlElement::childCount() const
 {
     return m_numChildren;
 }

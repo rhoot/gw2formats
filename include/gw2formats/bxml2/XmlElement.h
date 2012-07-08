@@ -41,8 +41,8 @@ public:
     void removeChild(XmlElement* p_element);
     void clear();
 
-    uint32 numAttributes() const;
-    uint32 numChildren() const;
+    uint32 attributeCount() const;
+    uint32 childCount() const;
 
     XmlAttribute* const* attributes();
     const XmlAttribute* const* attributes() const;
