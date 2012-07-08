@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\samples\breakpoint-test\main.cpp">
+    <ClCompile Include="..\samples\bxml2-test\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

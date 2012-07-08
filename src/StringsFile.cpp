@@ -95,18 +95,18 @@ std::basic_string<char16> StringsFileEntry::get() const
 }; // anon namespace
 
 StringsFile::StringsFile()
-    : m_language(Language::English)
+    : m_language(language::English)
 {
 }
 
 StringsFile::StringsFile(const byte* p_data, uint32 p_size)
-    : m_language(Language::English)
+    : m_language(language::English)
 {
     assign(p_data, p_size);
 }
 
 StringsFile::StringsFile(const std::string& p_filename)
-    : m_language(Language::English)
+    : m_language(language::English)
 {
     load(p_filename);
 }
@@ -166,7 +166,7 @@ bool StringsFile::assign(const byte* p_data, uint32 p_size)
 
     auto pos   = p_data + 4;
     auto end   = p_data + p_size - 2;
-    m_language = static_cast<Language::Type>(*end);
+    m_language = static_cast<language::Type>(*end);
 
     while (pos < end) {
         if (end - pos < 6) { return false; }
@@ -183,7 +183,7 @@ bool StringsFile::assign(const byte* p_data, uint32 p_size)
 
 void StringsFile::clear()
 {
-    m_language = Language::English;
+    m_language = language::English;
     for (auto it = std::begin(m_entries); it != std::end(m_entries); it++) {
         delete *it;
     }
@@ -201,7 +201,7 @@ const IStringsFileEntry& StringsFile::entry(uint32 p_index) const
     return *m_entries[p_index];
 }
 
-Language::Type StringsFile::language() const
+language::Type StringsFile::language() const
 {
     return m_language;
 }

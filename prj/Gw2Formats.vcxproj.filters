@@ -444,6 +444,9 @@
     <ClInclude Include="..\include\gw2formats\Language.h">
       <Filter>Header Files\external</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\gw2formats\TextureFile.h">
+      <Filter>Header Files\external</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\pf\helpers\FileReference.cpp">
@@ -603,6 +606,9 @@
       <Filter>Source Files\bxml2</Filter>
     </ClCompile>
     <ClCompile Include="..\src\StringsFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\TextureFile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

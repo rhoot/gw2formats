@@ -18,7 +18,7 @@
     <ClInclude Include="..\include\gw2formats\bxml2\XmlElement.h" />
     <ClInclude Include="..\include\gw2formats\bxml2\XmlWriter.h" />
     <ClInclude Include="..\include\gw2formats\fcc.h" />
-    <ClInclude Include="..\include\gw2formats\Language.h" />
+    <ClInclude Include="..\include\gw2formats\language.h" />
     <ClInclude Include="..\include\gw2formats\pf\AnimSequencesPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\AudioPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\BankIndexPackFile.h" />
@@ -100,6 +100,7 @@
     <ClInclude Include="..\include\gw2formats\pf\TextVariantPackFile.h" />
     <ClInclude Include="..\include\gw2formats\pf\TextVoicePackFile.h" />
     <ClInclude Include="..\include\gw2formats\StringsFile.h" />
+    <ClInclude Include="..\include\gw2formats\TextureFile.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\bxml2\Bxml2Reader.cpp" />
@@ -155,11 +156,12 @@
     <ClCompile Include="..\src\pf\helpers\FileName.cpp" />
     <ClCompile Include="..\src\pf\helpers\FileReference.cpp" />
     <ClCompile Include="..\src\StringsFile.cpp" />
+    <ClCompile Include="..\src\TextureFile.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C59C7548-51B5-496B-9B74-BE454AA4C8A2}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Gw2Formats</RootNamespace>
+    <RootNamespace>gw2f</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

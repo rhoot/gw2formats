@@ -8,7 +8,7 @@
 namespace gw2f
 {
 
-namespace Language { 
+namespace language { 
 enum Type {
     English     = 0,
     Korean      = 1,

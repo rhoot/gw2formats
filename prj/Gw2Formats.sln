@@ -1,14 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Gw2Formats", "Gw2Formats.vcxproj", "{C59C7548-51B5-496B-9B74-BE454AA4C8A2}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gw2formats", "gw2formats.vcxproj", "{C59C7548-51B5-496B-9B74-BE454AA4C8A2}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EulaSample", "EulaSample.vcxproj", "{3F5F3262-265A-4D17-8D1E-5981619877BF}"
 	ProjectSection(ProjectDependencies) = postProject
 		{C59C7548-51B5-496B-9B74-BE454AA4C8A2} = {C59C7548-51B5-496B-9B74-BE454AA4C8A2}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestFormat", "TestFormat.vcxproj", "{7343837E-7881-4484-BEAE-4D947AA07516}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Bxml2Test", "Bxml2Test.vcxproj", "{7343837E-7881-4484-BEAE-4D947AA07516}"
 	ProjectSection(ProjectDependencies) = postProject
 		{C59C7548-51B5-496B-9B74-BE454AA4C8A2} = {C59C7548-51B5-496B-9B74-BE454AA4C8A2}
 	EndProjectSection
@@ -19,6 +19,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CntcFileReader", "CntcFileR
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EnumStrings", "EnumStrings.vcxproj", "{0243221F-B417-4952-980D-D650A2ACAC5E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C59C7548-51B5-496B-9B74-BE454AA4C8A2} = {C59C7548-51B5-496B-9B74-BE454AA4C8A2}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TextureDump", "TextureDump.vcxproj", "{66CAA33B-BAAE-4950-A17B-E311859DB2CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,6 +51,10 @@ Global
 		{0243221F-B417-4952-980D-D650A2ACAC5E}.Debug|Win32.Build.0 = Debug|Win32
 		{0243221F-B417-4952-980D-D650A2ACAC5E}.Release|Win32.ActiveCfg = Release|Win32
 		{0243221F-B417-4952-980D-D650A2ACAC5E}.Release|Win32.Build.0 = Release|Win32
+		{66CAA33B-BAAE-4950-A17B-E311859DB2CA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{66CAA33B-BAAE-4950-A17B-E311859DB2CA}.Debug|Win32.Build.0 = Debug|Win32
+		{66CAA33B-BAAE-4950-A17B-E311859DB2CA}.Release|Win32.ActiveCfg = Release|Win32
+		{66CAA33B-BAAE-4950-A17B-E311859DB2CA}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

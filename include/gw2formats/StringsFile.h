@@ -9,7 +9,7 @@
 #include <vector>
 
 #include <gw2formats/base.h>
-#include <gw2formats/Language.h>
+#include <gw2formats/language.h>
 
 namespace gw2f
 {
@@ -28,7 +28,7 @@ public:
 
 GW2FORMATS_API class StringsFile
 {
-    Language::Type m_language;
+    language::Type m_language;
     std::vector<IStringsFileEntry*> m_entries;
 public:
     StringsFile();
@@ -46,7 +46,7 @@ public:
     uint32 entryCount() const;
     const IStringsFileEntry& entry(uint32 p_index) const;
 
-    Language::Type language() const;
+    language::Type language() const;
 };
 
 }; // namespace gw2f
