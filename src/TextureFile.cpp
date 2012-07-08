@@ -133,6 +133,13 @@ bool TextureFile::assign(const byte* p_data, uint32 p_size)
     if (p_size < 12) { return false; }
     clear();
 
+    auto fourcc = *reinterpret_cast<const uint32*>(p_data);
+    if (fourcc != fcc::ATEX && fourcc != fcc::ATEC && fourcc != fcc::ATEP &&
+        fourcc != fcc::ATET && fourcc != fcc::ATEU && fourcc != fcc::ATTX)
+    {
+        return false;
+    }
+
     auto format = *reinterpret_cast<const uint32*>(p_data + 4);
     auto width  = *reinterpret_cast<const uint16*>(p_data + 8);
     auto height = *reinterpret_cast<const uint16*>(p_data + 10);

@@ -1,10 +1,14 @@
 
+//
+// This sample links with gw2DatTools, for texture decompression.
+// https://github.com/ahom/gw2DatTools/
+//
+
 #include <cstdio>
 #include <iostream>
 #include <sstream>
 #include <string>
 
-#include <gw2formats/fcc.h>
 #include <gw2formats/TextureFile.h>
 
 #include <gw2DatTools/compression/inflateTextureFileBuffer.h>
@@ -32,12 +36,14 @@ int main(int argc, char** argv)
     for (uint32_t i = 0; i < file.mipMapCount(); i++) {
         auto& mipmap  = file.mipMapLevel(i);
 
-        uint32_t size = 0;
-        auto data     = gw2dt::compression::inflateTextureBlockBuffer(mipmap.width(), mipmap.height(), mipmap.format(), mipmap.size(), mipmap.data(), size);
-
         std::stringstream filename;
         filename << argv[2] << "/mipmap" << i << ".tga";
+
+        uint32_t size = 0;
+        auto data = gw2dt::compression::inflateTextureBlockBuffer(mipmap.width(), mipmap.height(), mipmap.format(), mipmap.size(), mipmap.data(), size);
+
         dumpMipMapData(filename.str(), data, size);
+        std::free(data);
     }
 
     return 0;
