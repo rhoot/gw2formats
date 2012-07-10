@@ -4,31 +4,35 @@
 
 #include <algorithm>
 #include <fstream>
+#include <stdexcept>
+
+#include <gw2formats/fcc.h>
 
 namespace gw2f
 {
 namespace 
 {
 
-class TextureData
-    : public ITextureData
+class MipMapData
+    : public IMipMapData
 {
     uint16 m_width;
     uint16 m_height;
     uint32 m_format;
     std::vector<byte> m_data;
 public:
-    TextureData(uint16 p_width, uint16 p_height, uint32 p_format, const byte* p_data, uint32 p_size);
-    TextureData(const ITextureData& p_other);
-    virtual ~TextureData();
+    MipMapData(uint16 p_width, uint16 p_height, uint32 p_format, const byte* p_data, uint32 p_size);
+    MipMapData(const IMipMapData& p_other);
+    virtual ~MipMapData();
     virtual uint16 width() const override;
     virtual uint16 height() const override;
     virtual uint32 format() const override;
     virtual const byte* data() const override;
     virtual uint32 size() const override;
+    virtual uint32 uncompressedSize() const override;
 };
 
-TextureData::TextureData(uint16 p_width, uint16 p_height, uint32 p_format, const byte* p_data, uint32 p_size)
+MipMapData::MipMapData(uint16 p_width, uint16 p_height, uint32 p_format, const byte* p_data, uint32 p_size)
     : m_width(p_width)
     , m_height(p_height)
     , m_format(p_format)
@@ -37,7 +41,7 @@ TextureData::TextureData(uint16 p_width, uint16 p_height, uint32 p_format, const
     std::copy_n(p_data, p_size, m_data.data());
 }
 
-TextureData::TextureData(const ITextureData& p_other)
+MipMapData::MipMapData(const IMipMapData& p_other)
     : m_width(p_other.width())
     , m_height(p_other.height())
     , m_format(p_other.format())
@@ -46,33 +50,54 @@ TextureData::TextureData(const ITextureData& p_other)
     std::copy_n(p_other.data(), p_other.size(), m_data.data());
 }
 
-TextureData::~TextureData()
+MipMapData::~MipMapData()
 {
 }
 
-uint16 TextureData::width() const
+uint16 MipMapData::width() const
 {
     return m_width;
 }
 
-uint16 TextureData::height() const
+uint16 MipMapData::height() const
 {
     return m_height;
 }
 
-uint32 TextureData::format() const
+uint32 MipMapData::format() const
 {
     return m_format;
 }
 
-const byte* TextureData::data() const
+const byte* MipMapData::data() const
 {
     return m_data.data();
 }
 
-uint32 TextureData::size() const
+uint32 MipMapData::size() const
 {
     return m_data.size();
+}
+
+uint32 MipMapData::uncompressedSize() const
+{
+    uint32 numBlocks = ((m_width + 3) >> 2) * ((m_height + 3) >> 2);
+    switch (m_format)
+    {
+    case fcc::DXT1:
+    case fcc::DXTA:
+        return numBlocks * 8;
+    case fcc::DXT2:
+    case fcc::DXT3:
+    case fcc::DXT4:
+    case fcc::DXT5:
+    case fcc::DXTL:
+    case fcc::DXTN:
+    case fcc::_3DCX:
+        return numBlocks * 16;
+    default:
+        throw std::exception("Unsupported format.");
+    }
 }
 
 }; // anon namespace
@@ -108,7 +133,7 @@ TextureFile& TextureFile::operator=(const TextureFile& p_other)
     clear();
     m_data.resize(p_other.m_data.size());
     for (uint32 i = 0; i < p_other.m_data.size(); i++) {
-        m_data[i] = new TextureData(*p_other.m_data[i]);
+        m_data[i] = new MipMapData(*p_other.m_data[i]);
     }
     return *this;
 }
@@ -149,7 +174,7 @@ bool TextureFile::assign(const byte* p_data, uint32 p_size)
 
     while (pos < end) {
         auto size = *reinterpret_cast<const uint32*>(pos);
-        m_data.push_back(new TextureData(width, height, format, pos, size));
+        m_data.push_back(new MipMapData(width, height, format, pos, size));
         pos      += size;
         width   >>= 1;
         height  >>= 1;
@@ -187,7 +212,7 @@ uint32 TextureFile::mipMapCount() const
     return m_data.size();
 }
 
-const ITextureData& TextureFile::mipMapLevel(uint32 p_level) const
+const IMipMapData& TextureFile::mipMapLevel(uint32 p_level) const
 {
     if (p_level >= m_data.size()) { throw std::out_of_range("The given index is too large."); }
     return *m_data[p_level];

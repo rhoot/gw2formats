@@ -1,19 +1,22 @@
 
 //
 // This sample is likely to not work under non-windows OSes, due to wchar_t not
-// being utf-16 encoded.
+// being UTF-16 encoded. As such wcout probably won't do what it's supposed to.
 //
 
 #include <iostream>
 
 #include <gw2formats/pf/EulaPackFile.h>
 
-int main(int argc, char** argv) {
+int main(int argc, char** argv)
+{
+    // Verify that the user provided the name of a file to load.
     if (argc <= 1) {
         std::cout << "Usage: " << argv[0] << " <eula file>" << std::endl;
         return 0;
     }
 
+    // Open the given eula file
     gw2f::pf::EulaPackFile eula(argv[1]);
     auto chunk = eula.chunk<gw2f::pf::EulaChunks::eula>();
 

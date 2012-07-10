@@ -1,7 +1,7 @@
 
 //
 // This sample is not likely to work as intended in non-windows OSes, due to
-// wchar_t not being UTF-16 encoded.
+// wchar_t not being UTF-16 encoded. As such, wcout will probably freak out.
 //
 
 #include <algorithm>
@@ -17,6 +17,7 @@ int main(int argc, char** argv)
         return 0;
     }
 
+    // Characters below 128 are the same as for ANSI
     auto isAbove127 = [](gw2f::char16 c) { return (c >= 0x80); };
 
     gw2f::StringsFile file(argv[1]);

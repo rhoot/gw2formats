@@ -13,6 +13,7 @@ namespace bxml2 {
 class XmlDocument;
 class XmlElement;
 
+/** Represents an XML attribute. */
 class XmlAttribute
 {
     friend class XmlElement;
@@ -20,21 +21,37 @@ class XmlAttribute
     std::string m_name;
     std::string m_value;
 public:
+    /** Constructors. Creates an attribute with the given name.
+     *  \param[in]  p_name  Name of the attribute. */
     XmlAttribute(const std::string& p_name);
+    /** Constructors. Creates an attribute with the given name and value.
+     *  \param[in]  p_name  Name of the attribute. 
+     *  \param[in]  p_value Value of the attribute. */
     XmlAttribute(const std::string& p_name, const std::string& p_value);
+    /** Copy constructor. */
     XmlAttribute(const XmlAttribute& p_other);
+    /** Destructor. */
     ~XmlAttribute();
 
+    /** Assignment operator. Copies the data from the given XmlAttribute. */
     XmlAttribute& operator=(const XmlAttribute& p_other);
 
+    /** Gets the owner document. */
     XmlDocument* document();
+    /** Gets the owner element. */
     XmlElement* parent();
+    /** Gets the const owner document. */
     const XmlDocument* document() const;
+    /** Gets the const owner element. */
     const XmlElement* parent() const;
 
+    /** Gets the name of this attribute. */
     const std::string& name() const;
+    /** Gets the value of this attribute. */
     const std::string& value() const;
+    /** Sets the name of this attribute. */
     void setName(const std::string& p_name);
+    /** Sets the value of this attribute. */
     void setValue(const std::string& p_value);
 };
 

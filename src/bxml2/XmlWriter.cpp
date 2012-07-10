@@ -72,12 +72,12 @@ bool XmlWriter::write(const XmlDocument& p_document, const std::string& p_filena
     return retval;
 }
 
-uint32_t XmlWriter::write(const XmlDocument& p_document, byte* p_buffer, uint32_t maxSize)
+uint32_t XmlWriter::write(const XmlDocument& p_document, byte* p_buffer, uint32_t p_maxSize)
 {
     std::stringstream stream;
     write(p_document, stream);
 
-    auto size = std::min(static_cast<uint32_t>(stream.tellg()), maxSize);
+    auto size = std::min(static_cast<uint32_t>(stream.tellg()), p_maxSize);
     stream.seekg(0, std::ios::beg);
     stream.read(reinterpret_cast<char*>(p_buffer), size);
 

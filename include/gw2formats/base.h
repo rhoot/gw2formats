@@ -27,50 +27,50 @@
 
 namespace gw2f {
 
-typedef uint8_t         byte;
-typedef uint16_t        word;
-typedef uint32_t        dword;
-typedef uint64_t        qword;
+typedef uint8_t         byte;       /**< One byte. */
+typedef uint16_t        word;       /**< Unsigned 16-bit integer. */
+typedef uint32_t        dword;      /**< Unsigned 32-bit integer. */
+typedef uint64_t        qword;      /**< Unsigned 64-bit integer. */
 
-typedef int8_t          int8;
-typedef uint8_t         uint8;
-typedef int16_t         int16;
-typedef uint16_t        uint16;
-typedef int32_t         int32;
-typedef uint32_t        uint32;
-typedef int64_t         int64;
-typedef uint64_t        uint64;
+typedef int8_t          int8;       /**< Signed 8-bit integer. */
+typedef uint8_t         uint8;      /**< Unsigned 8-bit integer. */
+typedef int16_t         int16;      /**< Signed 16-bit integer. */
+typedef uint16_t        uint16;     /**< Unsigned 16-bit integer. */
+typedef int32_t         int32;      /**< Signed 32-bit integer. */
+typedef uint32_t        uint32;     /**< Unsigned 32-bit integer. */
+typedef int64_t         int64;      /**< Signed 64-bit integer. */
+typedef uint64_t        uint64;     /**< Unsigned 64-bit integer. */
 
-typedef float           float32;
-typedef double          float64;
+typedef float           float32;    /**< 32-bit float. */
+typedef double          float64;    /**< 64-bit float. */
 
 // Unicode chars (NOTE: UNTESTED FOR ANYTHING BUT MSVC)
 #ifdef _MSC_VER
-   typedef wchar_t      char16;
-   typedef uint32       char32;
+   typedef wchar_t      char16;     /**< UTF-16 character. */
+   typedef uint32       char32;     /**< UTF-32 character. */
 #  define GW2F_U16(x)   L##x
 #elif defined(__has_feature) && __has_feature(cxx_unicode_literals)
-   typedef char16_t     char16;
-   typedef char32_t     char32;
+   typedef char16_t     char16;     /**< UTF-16 character. */
+   typedef char32_t     char32;     /**< UTF-32 character. */
 #  define GW2F_U16(x)   u##x
 #  define GW2F_U32(x)   U##x
 #elif defined(__GNUC__) && (__GNUC__ > 4 || (__GNUC__ == 4 && __GNUC_MINOR__ >= 5))
-   typedef char16_t     char16;
-   typedef char32_t     char32;
+   typedef char16_t     char16;     /**< UTF-16 character. */
+   typedef char32_t     char32;     /**< UTF-32 character. */
 #  define GW2F_U16(x)   u##x
 #  define GW2F_U32(x)   U##x
 #else
 #  if defined(WCHAR_MAX) && (WCHAR_MAX == 0xffff)
-     typedef wchar_t    char16;
+     typedef wchar_t    char16;     /**< UTF-16 character. */
 #    define GW2F_U16(x) L##x
 #  else
-     typedef uint16     char16;
+     typedef uint16     char16;     /**< UTF-16 character. */
 #  endif
 #  if defined(WCHAR_MAX) && (WCHAR_MAX == 0xffffffff)
-     typedef wchar_t    char32;
+     typedef wchar_t    char32;     /**< UTF-32 character. */
 #    define GW2F_U32(x) L##x
 #  else
-     typedef uint32     char32;
+     typedef uint32     char32;     /**< UTF-32 character. */
 #  endif
 #endif 
 
