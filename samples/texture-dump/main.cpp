@@ -49,7 +49,7 @@ int main(int argc, char** argv)
 
         // Build filename
         std::stringstream filename;
-        filename << outputPath << "/mipmap" << i << ".tga";
+        filename << outputPath << "/mipmap" << i << ".raw";
 
         // Allocate output buffer, if needed
         if (buffer.size() < mipmap.uncompressedSize()) {
